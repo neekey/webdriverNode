@@ -1,6 +1,6 @@
 var client = require("webdriverjs").remote({
 	desiredCapabilities: {
-		chromeName: 'chrome'
+		browserName: 'chrome'
 	}
 });
 
@@ -9,6 +9,7 @@ client
     .url("http://www.google.com")
     .setValue("#lst-ib", "webdriver")
     .submitForm("#tsf")
+	.pause( 5000 )
     .end();
 
 
