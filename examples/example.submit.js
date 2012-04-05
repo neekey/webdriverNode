@@ -5,20 +5,28 @@ var util = require( 'util' );
 client
     .init()
     .url("http://www.google.com", function(){
-        this.customLog( 'hello! url' );
+
+        this.log( 'url finished!' );
         this.getTitle(function (){
 
+            this.log( 'title get!' );
             this.setValue("#lst-ib", "webdriver")
                 .submitForm("#tsf", function(){
-                    this.customLog( 'hello! submitForm' );})
+
+                    this.log( 'form submmit!' );
+                });
 
         }) ;
     })
     .pause( 5000, function (){
 
+        this.log( 'pause!' );
+
         this.end(function ( r ){
 
-            console.log( JSON.stringify( r ) );
+//            this.log( 'end!' );
+//            console.log( JSON.stringify( r ) );
+            console.log( r );
         });
     });
 
