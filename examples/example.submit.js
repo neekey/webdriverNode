@@ -1,4 +1,4 @@
-var client = require("webdriverjs").remote();
+var client = require("../lib/webdriverNode").remote();
 
 var util = require( 'util' );
 

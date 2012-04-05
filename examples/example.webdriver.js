@@ -1,6 +1,6 @@
 // example of webdriver with queued commands, callaback commands and other stuff
 
-var webdriverjs = require("webdriverjs");
+var webdriverjs = require("../lib/webdriverNode");
 var client = webdriverjs.remote();
 
 

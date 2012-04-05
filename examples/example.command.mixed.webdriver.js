@@ -1,7 +1,7 @@
 // example of webdriver with mixed commands.
 // some are chained, some are inside the callbacks.
 
-var webdriverjs = require("webdriverjs");
+var webdriverjs = require("../lib/webdriverNode");
 var client = webdriverjs.remote();
 
 client

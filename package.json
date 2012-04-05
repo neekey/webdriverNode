@@ -1,0 +1,22 @@
+{
+    "name":"webdriverNode",
+    "description":"A nodejs bindings implementation for selenium 2.0/webdriver",
+    "tags":["web", "test", "selenium", "browser", "javascript"],
+    "version":"0.0.1",
+    "contributors": {
+        "camilo tapia": "camilo.tapia@gmail.com",
+        "neekey": "ni184775761@gmail.com"
+    },
+    "repository":{
+        "type":"git",
+        "url":"git@github.com:neekey/webdriverNode.git"
+    },
+    "bugs":{
+        "url":"https://github.com/Camme/webdriverNode/issues"
+    },
+    "engine":["node"],
+    "main":"./lib/webdriverNode",
+    "dependencies":{
+        "SyncRun":"1.0.1"
+    }
+}
