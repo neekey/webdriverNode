@@ -1,4 +1,8 @@
-var client = require("../lib/webdriverNode").remote();
+var client = require("../lib/webdriverNode").remote({
+    desiredCapabilities: {
+        browserName:"chrome"
+    }
+});
 
 var util = require( 'util' );
 
@@ -18,13 +22,14 @@ client
 
         }) ;
     })
-    .pause( 5000, function (){
+    .pause( 1000, function (){
 
         this.log( 'pause!' );
 
+        this.saveScreenshot();
         this.end(function ( r ){
 
-//            this.log( 'end!' );
+            this.log( 'end!' );
 //            console.log( JSON.stringify( r ) );
             console.log( r );
         });
