@@ -3,11 +3,12 @@
 var webdriverjs = require("../lib/webdriverNode");
 //var client = webdriverjs.remote("172.16.135.132");
 var client = webdriverjs.remote();
+
 client
 	.testMode()
 	.init()
-	.url("http://www.onezerozeroone.com/projects/webdriverjs/testsite/")
-	.tests.cssPropertyEquals("#foo", "color", "#000000", "Color of #tjena is #000000")
+    .url("http://www.onezerozeroone.com/projects/webdriverjs/testsite/")
+    .tests.cssPropertyEquals("#foo", "color", "#000000", "Color of #tjena is #000000")
 	.tests.titleEquals("Foo", "Title of the page is 'Foo'")
 	.tests.visible("#sign", false, "#sign is not visible before click")
 	.click("#submit")
