@@ -17,6 +17,6 @@
     "engine":["node"],
     "main":"./lib/webdriverNode",
     "dependencies":{
-        "SyncRun":"1.0.2"
+        "SyncRun":"1.0.3"
     }
 }
