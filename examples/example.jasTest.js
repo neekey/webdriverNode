@@ -58,9 +58,10 @@ client
                     this.expect( Date.now() - currentTime > 0).toBe( true );
                 } );
 
-                this.end(function ( r ){
+                this.end(function ( logs, testResult ){
 
-                    console.log( JSON.stringify( this.getTestResult() ) );
+                    console.log( 'Test Result: ', testResult );
+                    console.log( 'All Logs: ', logs );
                 });
             });
     });
