@@ -2,7 +2,7 @@
     "name":"webdriverNode",
     "description":"A nodejs bindings implementation for selenium 2.0/webdriver",
     "tags":["web", "test", "selenium", "browser", "javascript"],
-    "version":"0.0.4",
+    "version":"0.0.5",
     "contributors": {
         "camilo tapia": "camilo.tapia@gmail.com",
         "neekey": "ni184775761@gmail.com"
