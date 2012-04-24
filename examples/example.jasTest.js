@@ -8,58 +8,62 @@ var util = require( 'util' );
 
 client
     .init()
-    .describe( 'hello', function (){
+    .describe( 'Main Suite', function (){
 
-        this.describe( 'hello!', function (){
+        this.describe( 'Child Suite', function (){
 
-            this.log( 'call describe in it success!' );
-            this.log( 'hello!');
+            this.it( 'Simple Spec', function (){
 
+                this.expect( 1 ).not.toBe( 2 );
+                this.expect( 'hellohahaa').toMatch( '^hello.+' );
+                this.expect( 'hello' ).toBeDefined();
+                this.expect( undefined).toBeUndefined();
+                this.expect( null).toBeNull();
 
+            });
         });
 
         this.url("http://www.google.com", function(){
 
-            this.log( 'url finished!' );
-            this.getTitle(function (){
+            this.it( 'title Test', function (){
 
-                this.log( 'title get!' );
-                this.setValue("#lst-ib", "webdriver")
-                    .submitForm("#tsf", function(){
+                this.getTitle(function ( title ){
 
-                        this.log( 'form submmit!' );
-                    });
+                    this.expect( title ).toBe( 'Google' );
 
-            }) ;
+                    this.setValue("#lst-ib", "webdriver")
+                        .getValue( '#lst-ib', function ( value ){
 
-            this.it( 'it in url', function (){
-
-                this.expect( 1 ).toBe( 1 );
-            } );
-
+                            this.expect( value ).toBe( 'webdriver' );
+                        })
+                        .submitForm("#tsf");
+                }) ;
+            });
         });
-
-        this.log( 'hello');
     })
 
-    .describe( 'hello two!', function (){
+    .describe( 'The Other Main Suite', function (){
 
-            this.it( 'hello two it', function (){
+            this.it( 'The Other Simple Spec', function (){
 
-                this.pause( 1 );
+                var currentTime;
+
+                this.do(function (){
+
+                    currentTime = Date.now();
+                });
+
+                this.pause( 1, function (){
+
+                    this.expect( Date.now() - currentTime > 0).toBe( true );
+                } );
 
                 this.end(function ( r ){
 
-                    this.log( 'end!' );
-                    console.log( this._suites[ 0 ].specs[ 0 ].items );
-//            console.log( JSON.stringify( r ) );
-//                    console.log( r );
+                    console.log( JSON.stringify( this.getTestResult() ) );
                 });
             });
-
-
-        this.log( 'hello two');
-    })
+    });
 
 
 
