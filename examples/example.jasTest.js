@@ -17,8 +17,14 @@ client
                 this.expect( 1 ).not.toBe( 2 );
                 this.expect( 'hellohahaa').toMatch( '^hello.+' );
                 this.expect( 'hello' ).toBeDefined();
+
+                // 测试错误的情况
+                this.expect( 1).toBe( 2 );
+
                 this.expect( undefined).toBeUndefined();
                 this.expect( null).toBeNull();
+
+
 
             });
         });
@@ -60,8 +66,8 @@ client
 
                 this.end(function ( logs, testResult ){
 
-                    console.log( 'Test Result: ', testResult );
-                    console.log( 'All Logs: ', logs );
+                    console.log( 'Test Result: ', JSON.stringify( testResult ) );
+//                    console.log( 'All Logs: ', logs );
                 });
             });
     });
