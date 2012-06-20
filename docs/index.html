@@ -1,0 +1,651 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <h2>API DOC</h2>
+    </div>
+    <div class="content">
+        <div class="catalog">
+            <ul>
+                <li>
+                    <h3>commands&#x2F;</h3>
+                    <ul>
+                        <li>
+                            <a href="#item-alert.js">alert.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-click.js">click.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-do.js">do.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-doubleClick.js">doubleClick.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-dragAndDrop.js">dragAndDrop.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-end.js">end.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-facebookLogin.js">facebookLogin.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getAttribute.js">getAttribute.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getCssProperty.js">getCssProperty.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getElementCssProperty.js">getElementCssProperty.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getElementSize.js">getElementSize.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getLocation.js">getLocation.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getLocationInView.js">getLocationInView.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getSize.js">getSize.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getTagName.js">getTagName.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getText.js">getText.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getTitle.js">getTitle.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getValue.js">getValue.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-isVisible.js">isVisible.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-lazySetValue.js">lazySetValue.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-log.js">log.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-moveToObject.js">moveToObject.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-pause.js">pause.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-prompt.js">prompt.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-saveScreenshot.js">saveScreenshot.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-sendKeys.js">sendKeys.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-setValue.js">setValue.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-submitForm.js">submitForm.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-waitFor.js">waitFor.js</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>protocol&#x2F;</h3>
+                    <ul>
+                        <li>
+                            <a href="#item-acceptAlert.js">acceptAlert.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-buttonDown.js">buttonDown.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-buttonUp.js">buttonUp.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-doDoubleClick.js">doDoubleClick.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-element.js">element.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdAttribute.js">elementIdAttribute.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdClick.js">elementIdClick.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdCssProperty.js">elementIdCssProperty.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdDisplayed.js">elementIdDisplayed.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdKeys.js">elementIdKeys.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdLocation.js">elementIdLocation.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdLocationInView.js">elementIdLocationInView.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdName.js">elementIdName.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdSize.js">elementIdSize.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdText.js">elementIdText.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elementIdValue.js">elementIdValue.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-elements.js">elements.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-execute.js">execute.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-frame.js">frame.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-getAlertText.js">getAlertText.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-init.js">init.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-moveTo.js">moveTo.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-screenshot.js">screenshot.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-session.js">session.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-setPromptText.js">setPromptText.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-status.js">status.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-submit.js">submit.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-title.js">title.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-url.js">url.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-value.js">value.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-window.js">window.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-windowHandles.js">windowHandles.js</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>jasTest&#x2F;</h3>
+                    <ul>
+                        <li>
+                            <a href="#item-describe.js">describe.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-describeEnd.js">describeEnd.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-it.js">it.js</a>
+                        </li>
+                        <li>
+                            <a href="#item-itEnd.js">itEnd.js</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="documents">
+            <ul>
+                <li>
+                    <h3>commands&#x2F;</h3>
+                    <ul>
+                        <li id="item-alert.js">
+                            <h4>alert.js</h4>
+                            <div class="description">
+                            <pre>    @param text
+    @param callback</pre>
+                            </div>
+                        </li>
+                        <li id="item-click.js">
+                            <h4>click.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-do.js">
+                            <h4>do.js</h4>
+                            <div class="description">
+                            <pre> * 该方法什么都不做，只是提供一个用户在同步执行队列中运行自定义代码的入口
+ * @param next</pre>
+                            </div>
+                        </li>
+                        <li id="item-doubleClick.js">
+                            <h4>doubleClick.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-dragAndDrop.js">
+                            <h4>dragAndDrop.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-end.js">
+                            <h4>end.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-facebookLogin.js">
+                            <h4>facebookLogin.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getAttribute.js">
+                            <h4>getAttribute.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getCssProperty.js">
+                            <h4>getCssProperty.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getElementCssProperty.js">
+                            <h4>getElementCssProperty.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getElementSize.js">
+                            <h4>getElementSize.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getLocation.js">
+                            <h4>getLocation.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getLocationInView.js">
+                            <h4>getLocationInView.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getSize.js">
+                            <h4>getSize.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getTagName.js">
+                            <h4>getTagName.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getText.js">
+                            <h4>getText.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getTitle.js">
+                            <h4>getTitle.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getValue.js">
+                            <h4>getValue.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-isVisible.js">
+                            <h4>isVisible.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-lazySetValue.js">
+                            <h4>lazySetValue.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-log.js">
+                            <h4>log.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-moveToObject.js">
+                            <h4>moveToObject.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-pause.js">
+                            <h4>pause.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-prompt.js">
+                            <h4>prompt.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-saveScreenshot.js">
+                            <h4>saveScreenshot.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-sendKeys.js">
+                            <h4>sendKeys.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-setValue.js">
+                            <h4>setValue.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-submitForm.js">
+                            <h4>submitForm.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-waitFor.js">
+                            <h4>waitFor.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>protocol&#x2F;</h3>
+                    <ul>
+                        <li id="item-acceptAlert.js">
+                            <h4>acceptAlert.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-buttonDown.js">
+                            <h4>buttonDown.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-buttonUp.js">
+                            <h4>buttonUp.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-doDoubleClick.js">
+                            <h4>doDoubleClick.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-element.js">
+                            <h4>element.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdAttribute.js">
+                            <h4>elementIdAttribute.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdClick.js">
+                            <h4>elementIdClick.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdCssProperty.js">
+                            <h4>elementIdCssProperty.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdDisplayed.js">
+                            <h4>elementIdDisplayed.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdKeys.js">
+                            <h4>elementIdKeys.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdLocation.js">
+                            <h4>elementIdLocation.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdLocationInView.js">
+                            <h4>elementIdLocationInView.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdName.js">
+                            <h4>elementIdName.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdSize.js">
+                            <h4>elementIdSize.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdText.js">
+                            <h4>elementIdText.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elementIdValue.js">
+                            <h4>elementIdValue.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-elements.js">
+                            <h4>elements.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-execute.js">
+                            <h4>execute.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-frame.js">
+                            <h4>frame.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-getAlertText.js">
+                            <h4>getAlertText.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-init.js">
+                            <h4>init.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-moveTo.js">
+                            <h4>moveTo.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-screenshot.js">
+                            <h4>screenshot.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-session.js">
+                            <h4>session.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-setPromptText.js">
+                            <h4>setPromptText.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-status.js">
+                            <h4>status.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-submit.js">
+                            <h4>submit.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-title.js">
+                            <h4>title.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-url.js">
+                            <h4>url.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-value.js">
+                            <h4>value.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-window.js">
+                            <h4>window.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-windowHandles.js">
+                            <h4>windowHandles.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>jasTest&#x2F;</h3>
+                    <ul>
+                        <li id="item-describe.js">
+                            <h4>describe.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-describeEnd.js">
+                            <h4>describeEnd.js</h4>
+                            <div class="description">
+                            <pre> * 一个Suite结束时将被调用（该方法自动嵌入到describe方法中，不需要显性调用）
+ * @param desc
+ * @param next</pre>
+                            </div>
+                        </li>
+                        <li id="item-it.js">
+                            <h4>it.js</h4>
+                            <div class="description">
+                            <pre></pre>
+                            </div>
+                        </li>
+                        <li id="item-itEnd.js">
+                            <h4>itEnd.js</h4>
+                            <div class="description">
+                            <pre> * 一个Suite结束时将被调用（该方法自动嵌入到describe方法中，不需要显性调用）
+ * @param desc
+ * @param next</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

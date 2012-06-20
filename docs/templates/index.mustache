@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <h2>API DOC</h2>
+    </div>
+    <div class="content">
+        <div class="catalog">
+            {{#docs}}
+            <ul>
+                <li>
+                    <h3>{{name}}</h3>
+                    <ul>
+                        {{#items}}
+                        <li>
+                            <a href="#item-{{name}}">{{name}}</a>
+                        </li>
+                        {{/items}}
+                    </ul>
+                </li>
+            </ul>
+            {{/docs}}
+        </div>
+        <div class="documents">
+            {{#docs}}
+            <ul>
+                <li>
+                    <h3>{{name}}</h3>
+                    <ul>
+                        {{#items}}
+                        <li id="item-{{name}}">
+                            <h4>{{name}}</h4>
+                            <div class="description">
+                            <pre>{{description}}</pre>
+                            </div>
+                        </li>
+                        {{/items}}
+                    </ul>
+                </li>
+            </ul>
+            {{/docs}}
+        </div>
+    </div>
+</body>
+</html>
