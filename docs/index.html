@@ -13,6 +13,7 @@
             <ul>
                 <li>
                     <h3>commands&#x2F;</h3>
+                    <pre>普通操作命令（由底层协议派生）</pre>
                     <ul>
                         <li>
                             <a href="#item-alert.js">alert.js</a>
@@ -107,6 +108,14 @@
             <ul>
                 <li>
                     <h3>protocol&#x2F;</h3>
+                    <pre>底层协议命令描述：
+如果您使用protocol级别的方法，所有的回到返回值都遵循以下json格式
+格式：{
+    sessionId:  {string|null}   某次回话的浏览器sessionId值
+    status:     {number}        一个状态代码，总结了该命令的结果。非零值表示该命令失败。
+    value:      {*}             返回的JSON数据
+}
+备注：以下文档只标注value字段的内容。详细的status状态码参看http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol</pre>
                     <ul>
                         <li>
                             <a href="#item-acceptAlert.js">acceptAlert.js</a>
@@ -210,6 +219,7 @@
             <ul>
                 <li>
                     <h3>jasTest&#x2F;</h3>
+                    <pre>类jasmine测试命令</pre>
                     <ul>
                         <li>
                             <a href="#item-describe.js">describe.js</a>
@@ -227,6 +237,7 @@
                 </li>
             </ul>
         </div>
+        <hr />
         <div class="documents">
             <ul>
                 <li>
@@ -418,37 +429,63 @@
                         <li id="item-acceptAlert.js">
                             <h4>acceptAlert.js</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 接受当前显示的警告对话框。通常，这是相当于在alert对话框上点击“确定”按钮。
+ 用法：this.acceptAlert(function(){});
+ callback函数参数：空</pre>
                             </div>
                         </li>
                         <li id="item-buttonDown.js">
                             <h4>buttonDown.js</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 在鼠标当前位置按住鼠标左键，请注意，在这个事件后面需要跟随鼠标release命令。click命令也会release鼠标。
+ 用法：this.buttonDown(function(){});
+ callback函数参数：空</pre>
                             </div>
                         </li>
                         <li id="item-buttonUp.js">
                             <h4>buttonUp.js</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 释放鼠标左键，每次mouseDown之后都必须调用一次这个方法。.
+ 用法：this.buttonUp(function(){});
+ callback函数参数：空</pre>
                             </div>
                         </li>
                         <li id="item-doDoubleClick.js">
                             <h4>doDoubleClick.js</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 在当前鼠标位置双击鼠标左键（当前位置可由moveto设定）
+ 用法：this.doDoubleClick(function(){});
+ callback函数参数：空</pre>
                             </div>
                         </li>
                         <li id="item-element.js">
                             <h4>element.js</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 查找页面上的元素,并返回找到的第一个元素，下面列出了支持的查找模式
+ ====================================================================
+ 模式           描述
+ class name     按照class查找元素；不支持.a .b这样的二级查找。
+ css selector   按照css查找元素。
+ id             按照id查找元素。
+ name           按照name查找元素。
+ link text      Returns an anchor element whose visible text partially matches the search value.
+ tag name       按照tag name查找元素。
+ xpath          按照xpath查找元素。
+ ====================================================================
+ 用法：this.element(&#39;css selector&#39;, &#39;#content a&#39;, function(ret){});
+ callback函数参数：ret = {ELEMENT:string}
+ 注意：此处返回值ret.ELEMENT是WebElement JSON object，用于标示这个节点。这是一个特殊的对象。</pre>
                             </div>
                         </li>
                         <li id="item-elementIdAttribute.js">
                             <h4>elementIdAttribute.js</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取指定元素的属性值
+ 用法：this.elementIDAttribute(id, attributeName, function(ret){});
+ callback函数参数：ret = string | null
+ 注意：
+    此处直接返回属性值，如果没有这个属性为null
+    此处的id为</pre>
                             </div>
                         </li>
                         <li id="item-elementIdClick.js">
