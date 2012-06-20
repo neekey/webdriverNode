@@ -2,7 +2,7 @@
  * 用于文档的生成
  */
 
-var Mustache = require( 'mustache' );
+var Mustache = require( './mustache' );
 var fs = require( 'fs' );
 var ps = require( 'path' );
 
