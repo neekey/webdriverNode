@@ -2,11 +2,11 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8"></meta>
-    <title></title>
+    <title>UI测试-API列表</title>
 </head>
 <body>
     <div class="header">
-        <h2>API DOC</h2>
+        <h2>UI测试-API列表</h2>
     </div>
     <div class="content">
         <div class="catalog">
@@ -16,91 +16,91 @@
                     <pre>普通操作命令（由底层协议派生）</pre>
                     <ul>
                         <li>
-                            <a href="#item-alert.js">alert.js</a>
+                            <a href="#item-alert">alert</a>
                         </li>
                         <li>
-                            <a href="#item-click.js">click.js</a>
+                            <a href="#item-click">click</a>
                         </li>
                         <li>
-                            <a href="#item-do.js">do.js</a>
+                            <a href="#item-do">do</a>
                         </li>
                         <li>
-                            <a href="#item-doubleClick.js">doubleClick.js</a>
+                            <a href="#item-doubleClick">doubleClick</a>
                         </li>
                         <li>
-                            <a href="#item-dragAndDrop.js">dragAndDrop.js</a>
+                            <a href="#item-dragAndDrop">dragAndDrop</a>
                         </li>
                         <li>
-                            <a href="#item-end.js">end.js</a>
+                            <a href="#item-end">end</a>
                         </li>
                         <li>
-                            <a href="#item-facebookLogin.js">facebookLogin.js</a>
+                            <a href="#item-facebookLogin">facebookLogin</a>
                         </li>
                         <li>
-                            <a href="#item-getAttribute.js">getAttribute.js</a>
+                            <a href="#item-getAttribute">getAttribute</a>
                         </li>
                         <li>
-                            <a href="#item-getCssProperty.js">getCssProperty.js</a>
+                            <a href="#item-getCssProperty">getCssProperty</a>
                         </li>
                         <li>
-                            <a href="#item-getElementCssProperty.js">getElementCssProperty.js</a>
+                            <a href="#item-getElementCssProperty">getElementCssProperty</a>
                         </li>
                         <li>
-                            <a href="#item-getElementSize.js">getElementSize.js</a>
+                            <a href="#item-getElementSize">getElementSize</a>
                         </li>
                         <li>
-                            <a href="#item-getLocation.js">getLocation.js</a>
+                            <a href="#item-getLocation">getLocation</a>
                         </li>
                         <li>
-                            <a href="#item-getLocationInView.js">getLocationInView.js</a>
+                            <a href="#item-getLocationInView">getLocationInView</a>
                         </li>
                         <li>
-                            <a href="#item-getSize.js">getSize.js</a>
+                            <a href="#item-getSize">getSize</a>
                         </li>
                         <li>
-                            <a href="#item-getTagName.js">getTagName.js</a>
+                            <a href="#item-getTagName">getTagName</a>
                         </li>
                         <li>
-                            <a href="#item-getText.js">getText.js</a>
+                            <a href="#item-getText">getText</a>
                         </li>
                         <li>
-                            <a href="#item-getTitle.js">getTitle.js</a>
+                            <a href="#item-getTitle">getTitle</a>
                         </li>
                         <li>
-                            <a href="#item-getValue.js">getValue.js</a>
+                            <a href="#item-getValue">getValue</a>
                         </li>
                         <li>
-                            <a href="#item-isVisible.js">isVisible.js</a>
+                            <a href="#item-isVisible">isVisible</a>
                         </li>
                         <li>
-                            <a href="#item-lazySetValue.js">lazySetValue.js</a>
+                            <a href="#item-lazySetValue">lazySetValue</a>
                         </li>
                         <li>
-                            <a href="#item-log.js">log.js</a>
+                            <a href="#item-log">log</a>
                         </li>
                         <li>
-                            <a href="#item-moveToObject.js">moveToObject.js</a>
+                            <a href="#item-moveToObject">moveToObject</a>
                         </li>
                         <li>
-                            <a href="#item-pause.js">pause.js</a>
+                            <a href="#item-pause">pause</a>
                         </li>
                         <li>
-                            <a href="#item-prompt.js">prompt.js</a>
+                            <a href="#item-prompt">prompt</a>
                         </li>
                         <li>
-                            <a href="#item-saveScreenshot.js">saveScreenshot.js</a>
+                            <a href="#item-saveScreenshot">saveScreenshot</a>
                         </li>
                         <li>
-                            <a href="#item-sendKeys.js">sendKeys.js</a>
+                            <a href="#item-sendKeys">sendKeys</a>
                         </li>
                         <li>
-                            <a href="#item-setValue.js">setValue.js</a>
+                            <a href="#item-setValue">setValue</a>
                         </li>
                         <li>
-                            <a href="#item-submitForm.js">submitForm.js</a>
+                            <a href="#item-submitForm">submitForm</a>
                         </li>
                         <li>
-                            <a href="#item-waitFor.js">waitFor.js</a>
+                            <a href="#item-waitFor">waitFor</a>
                         </li>
                     </ul>
                 </li>
@@ -110,108 +110,108 @@
                     <h3>protocol&#x2F;</h3>
                     <pre>底层协议命令描述：
 如果您使用protocol级别的方法，所有的回到返回值都遵循以下json格式
-格式：{
-    sessionId:  {string|null}   某次回话的浏览器sessionId值
-    status:     {number}        一个状态代码，总结了该命令的结果。非零值表示该命令失败。
-    value:      {*}             返回的JSON数据
-}
+   格式：{
+       sessionId:  {string|null}   某次回话的浏览器sessionId值
+       status:     {number}        一个状态代码，总结了该命令的结果。非零值表示该命令失败。
+       value:      {*}             返回的JSON数据
+   }
 备注：以下文档只标注value字段的内容。详细的status状态码参看http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol</pre>
                     <ul>
                         <li>
-                            <a href="#item-acceptAlert.js">acceptAlert.js</a>
+                            <a href="#item-acceptAlert">acceptAlert</a>
                         </li>
                         <li>
-                            <a href="#item-buttonDown.js">buttonDown.js</a>
+                            <a href="#item-buttonDown">buttonDown</a>
                         </li>
                         <li>
-                            <a href="#item-buttonUp.js">buttonUp.js</a>
+                            <a href="#item-buttonUp">buttonUp</a>
                         </li>
                         <li>
-                            <a href="#item-doDoubleClick.js">doDoubleClick.js</a>
+                            <a href="#item-doDoubleClick">doDoubleClick</a>
                         </li>
                         <li>
-                            <a href="#item-element.js">element.js</a>
+                            <a href="#item-element">element</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdAttribute.js">elementIdAttribute.js</a>
+                            <a href="#item-elementIdAttribute">elementIdAttribute</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdClick.js">elementIdClick.js</a>
+                            <a href="#item-elementIdClick">elementIdClick</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdCssProperty.js">elementIdCssProperty.js</a>
+                            <a href="#item-elementIdCssProperty">elementIdCssProperty</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdDisplayed.js">elementIdDisplayed.js</a>
+                            <a href="#item-elementIdDisplayed">elementIdDisplayed</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdKeys.js">elementIdKeys.js</a>
+                            <a href="#item-elementIdKeys">elementIdKeys</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdLocation.js">elementIdLocation.js</a>
+                            <a href="#item-elementIdLocation">elementIdLocation</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdLocationInView.js">elementIdLocationInView.js</a>
+                            <a href="#item-elementIdLocationInView">elementIdLocationInView</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdName.js">elementIdName.js</a>
+                            <a href="#item-elementIdName">elementIdName</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdSize.js">elementIdSize.js</a>
+                            <a href="#item-elementIdSize">elementIdSize</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdText.js">elementIdText.js</a>
+                            <a href="#item-elementIdText">elementIdText</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdValue.js">elementIdValue.js</a>
+                            <a href="#item-elementIdValue">elementIdValue</a>
                         </li>
                         <li>
-                            <a href="#item-elements.js">elements.js</a>
+                            <a href="#item-elements">elements</a>
                         </li>
                         <li>
-                            <a href="#item-execute.js">execute.js</a>
+                            <a href="#item-execute">execute</a>
                         </li>
                         <li>
-                            <a href="#item-frame.js">frame.js</a>
+                            <a href="#item-frame">frame</a>
                         </li>
                         <li>
-                            <a href="#item-getAlertText.js">getAlertText.js</a>
+                            <a href="#item-getAlertText">getAlertText</a>
                         </li>
                         <li>
-                            <a href="#item-init.js">init.js</a>
+                            <a href="#item-init">init</a>
                         </li>
                         <li>
-                            <a href="#item-moveTo.js">moveTo.js</a>
+                            <a href="#item-moveTo">moveTo</a>
                         </li>
                         <li>
-                            <a href="#item-screenshot.js">screenshot.js</a>
+                            <a href="#item-screenshot">screenshot</a>
                         </li>
                         <li>
-                            <a href="#item-session.js">session.js</a>
+                            <a href="#item-session">session</a>
                         </li>
                         <li>
-                            <a href="#item-setPromptText.js">setPromptText.js</a>
+                            <a href="#item-setPromptText">setPromptText</a>
                         </li>
                         <li>
-                            <a href="#item-status.js">status.js</a>
+                            <a href="#item-status">status</a>
                         </li>
                         <li>
-                            <a href="#item-submit.js">submit.js</a>
+                            <a href="#item-submit">submit</a>
                         </li>
                         <li>
-                            <a href="#item-title.js">title.js</a>
+                            <a href="#item-title">title</a>
                         </li>
                         <li>
-                            <a href="#item-url.js">url.js</a>
+                            <a href="#item-url">url</a>
                         </li>
                         <li>
-                            <a href="#item-value.js">value.js</a>
+                            <a href="#item-value">value</a>
                         </li>
                         <li>
-                            <a href="#item-window.js">window.js</a>
+                            <a href="#item-window">window</a>
                         </li>
                         <li>
-                            <a href="#item-windowHandles.js">windowHandles.js</a>
+                            <a href="#item-windowHandles">windowHandles</a>
                         </li>
                     </ul>
                 </li>
@@ -222,16 +222,16 @@
                     <pre>类jasmine测试命令</pre>
                     <ul>
                         <li>
-                            <a href="#item-describe.js">describe.js</a>
+                            <a href="#item-describe">describe</a>
                         </li>
                         <li>
-                            <a href="#item-describeEnd.js">describeEnd.js</a>
+                            <a href="#item-describeEnd">describeEnd</a>
                         </li>
                         <li>
-                            <a href="#item-it.js">it.js</a>
+                            <a href="#item-it">it</a>
                         </li>
                         <li>
-                            <a href="#item-itEnd.js">itEnd.js</a>
+                            <a href="#item-itEnd">itEnd</a>
                         </li>
                     </ul>
                 </li>
@@ -243,178 +243,178 @@
                 <li>
                     <h3>commands&#x2F;</h3>
                     <ul>
-                        <li id="item-alert.js">
-                            <h4>alert.js</h4>
+                        <li id="item-alert">
+                            <h4>alert</h4>
                             <div class="description">
                             <pre>    @param text
     @param callback</pre>
                             </div>
                         </li>
-                        <li id="item-click.js">
-                            <h4>click.js</h4>
+                        <li id="item-click">
+                            <h4>click</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-do.js">
-                            <h4>do.js</h4>
+                        <li id="item-do">
+                            <h4>do</h4>
                             <div class="description">
                             <pre> * 该方法什么都不做，只是提供一个用户在同步执行队列中运行自定义代码的入口
  * @param next</pre>
                             </div>
                         </li>
-                        <li id="item-doubleClick.js">
-                            <h4>doubleClick.js</h4>
+                        <li id="item-doubleClick">
+                            <h4>doubleClick</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-dragAndDrop.js">
-                            <h4>dragAndDrop.js</h4>
+                        <li id="item-dragAndDrop">
+                            <h4>dragAndDrop</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-end.js">
-                            <h4>end.js</h4>
+                        <li id="item-end">
+                            <h4>end</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-facebookLogin.js">
-                            <h4>facebookLogin.js</h4>
+                        <li id="item-facebookLogin">
+                            <h4>facebookLogin</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getAttribute.js">
-                            <h4>getAttribute.js</h4>
+                        <li id="item-getAttribute">
+                            <h4>getAttribute</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getCssProperty.js">
-                            <h4>getCssProperty.js</h4>
+                        <li id="item-getCssProperty">
+                            <h4>getCssProperty</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getElementCssProperty.js">
-                            <h4>getElementCssProperty.js</h4>
+                        <li id="item-getElementCssProperty">
+                            <h4>getElementCssProperty</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getElementSize.js">
-                            <h4>getElementSize.js</h4>
+                        <li id="item-getElementSize">
+                            <h4>getElementSize</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getLocation.js">
-                            <h4>getLocation.js</h4>
+                        <li id="item-getLocation">
+                            <h4>getLocation</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getLocationInView.js">
-                            <h4>getLocationInView.js</h4>
+                        <li id="item-getLocationInView">
+                            <h4>getLocationInView</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getSize.js">
-                            <h4>getSize.js</h4>
+                        <li id="item-getSize">
+                            <h4>getSize</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getTagName.js">
-                            <h4>getTagName.js</h4>
+                        <li id="item-getTagName">
+                            <h4>getTagName</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getText.js">
-                            <h4>getText.js</h4>
+                        <li id="item-getText">
+                            <h4>getText</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getTitle.js">
-                            <h4>getTitle.js</h4>
+                        <li id="item-getTitle">
+                            <h4>getTitle</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getValue.js">
-                            <h4>getValue.js</h4>
+                        <li id="item-getValue">
+                            <h4>getValue</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-isVisible.js">
-                            <h4>isVisible.js</h4>
+                        <li id="item-isVisible">
+                            <h4>isVisible</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-lazySetValue.js">
-                            <h4>lazySetValue.js</h4>
+                        <li id="item-lazySetValue">
+                            <h4>lazySetValue</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-log.js">
-                            <h4>log.js</h4>
+                        <li id="item-log">
+                            <h4>log</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-moveToObject.js">
-                            <h4>moveToObject.js</h4>
+                        <li id="item-moveToObject">
+                            <h4>moveToObject</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-pause.js">
-                            <h4>pause.js</h4>
+                        <li id="item-pause">
+                            <h4>pause</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-prompt.js">
-                            <h4>prompt.js</h4>
+                        <li id="item-prompt">
+                            <h4>prompt</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-saveScreenshot.js">
-                            <h4>saveScreenshot.js</h4>
+                        <li id="item-saveScreenshot">
+                            <h4>saveScreenshot</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-sendKeys.js">
-                            <h4>sendKeys.js</h4>
+                        <li id="item-sendKeys">
+                            <h4>sendKeys</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-setValue.js">
-                            <h4>setValue.js</h4>
+                        <li id="item-setValue">
+                            <h4>setValue</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-submitForm.js">
-                            <h4>submitForm.js</h4>
+                        <li id="item-submitForm">
+                            <h4>submitForm</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-waitFor.js">
-                            <h4>waitFor.js</h4>
+                        <li id="item-waitFor">
+                            <h4>waitFor</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
@@ -426,40 +426,52 @@
                 <li>
                     <h3>protocol&#x2F;</h3>
                     <ul>
-                        <li id="item-acceptAlert.js">
-                            <h4>acceptAlert.js</h4>
+                        <li id="item-acceptAlert">
+                            <h4>acceptAlert</h4>
                             <div class="description">
                             <pre> 接受当前显示的警告对话框。通常，这是相当于在alert对话框上点击“确定”按钮。
- 用法：this.acceptAlert(function(){});
- callback函数参数：空</pre>
+
+ 用法：this.acceptAlert(function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
-                        <li id="item-buttonDown.js">
-                            <h4>buttonDown.js</h4>
+                        <li id="item-buttonDown">
+                            <h4>buttonDown</h4>
                             <div class="description">
                             <pre> 在鼠标当前位置按住鼠标左键，请注意，在这个事件后面需要跟随鼠标release命令。click命令也会release鼠标。
- 用法：this.buttonDown(function(){});
- callback函数参数：空</pre>
+
+ 用法：this.buttonDown(function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
-                        <li id="item-buttonUp.js">
-                            <h4>buttonUp.js</h4>
+                        <li id="item-buttonUp">
+                            <h4>buttonUp</h4>
                             <div class="description">
-                            <pre> 释放鼠标左键，每次mouseDown之后都必须调用一次这个方法。.
- 用法：this.buttonUp(function(){});
- callback函数参数：空</pre>
+                            <pre> 释放鼠标左键，每次mouseDown之后都必须调用一次这个方法
+
+ 用法：this.buttonUp(function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
-                        <li id="item-doDoubleClick.js">
-                            <h4>doDoubleClick.js</h4>
+                        <li id="item-doDoubleClick">
+                            <h4>doDoubleClick</h4>
                             <div class="description">
                             <pre> 在当前鼠标位置双击鼠标左键（当前位置可由moveto设定）
- 用法：this.doDoubleClick(function(){});
- callback函数参数：空</pre>
+
+ 用法：this.doDoubleClick(function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
-                        <li id="item-element.js">
-                            <h4>element.js</h4>
+                        <li id="item-element">
+                            <h4>element</h4>
                             <div class="description">
                             <pre> 查找页面上的元素,并返回找到的第一个元素，下面列出了支持的查找模式
  ====================================================================
@@ -472,174 +484,186 @@
  tag name       按照tag name查找元素。
  xpath          按照xpath查找元素。
  ====================================================================
+
  用法：this.element(&#39;css selector&#39;, &#39;#content a&#39;, function(ret){});
- callback函数参数：ret = {ELEMENT:string}
- 注意：此处返回值ret.ELEMENT是WebElement JSON object，用于标示这个节点。这是一个特殊的对象。</pre>
+
+ 其中ret.value为
+    {
+        &#39;ELEMENT&#39;: string
+    }
+
+ 注意：此处返回值ret.ELEMENT是WebElement JSON object，用于标示这个节点。这是一个特殊的对象。
+</pre>
                             </div>
                         </li>
-                        <li id="item-elementIdAttribute.js">
-                            <h4>elementIdAttribute.js</h4>
+                        <li id="item-elementIdAttribute">
+                            <h4>elementIdAttribute</h4>
                             <div class="description">
                             <pre> 获取指定元素的属性值
+
  用法：this.elementIDAttribute(id, attributeName, function(ret){});
- callback函数参数：ret = string | null
+
+ 其中ret.value为
+     string | null
+ 
  注意：
     此处直接返回属性值，如果没有这个属性为null
-    此处的id为</pre>
+    此处的id可以通过element方法获取到
+</pre>
                             </div>
                         </li>
-                        <li id="item-elementIdClick.js">
-                            <h4>elementIdClick.js</h4>
+                        <li id="item-elementIdClick">
+                            <h4>elementIdClick</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdCssProperty.js">
-                            <h4>elementIdCssProperty.js</h4>
+                        <li id="item-elementIdCssProperty">
+                            <h4>elementIdCssProperty</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdDisplayed.js">
-                            <h4>elementIdDisplayed.js</h4>
+                        <li id="item-elementIdDisplayed">
+                            <h4>elementIdDisplayed</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdKeys.js">
-                            <h4>elementIdKeys.js</h4>
+                        <li id="item-elementIdKeys">
+                            <h4>elementIdKeys</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdLocation.js">
-                            <h4>elementIdLocation.js</h4>
+                        <li id="item-elementIdLocation">
+                            <h4>elementIdLocation</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdLocationInView.js">
-                            <h4>elementIdLocationInView.js</h4>
+                        <li id="item-elementIdLocationInView">
+                            <h4>elementIdLocationInView</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdName.js">
-                            <h4>elementIdName.js</h4>
+                        <li id="item-elementIdName">
+                            <h4>elementIdName</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdSize.js">
-                            <h4>elementIdSize.js</h4>
+                        <li id="item-elementIdSize">
+                            <h4>elementIdSize</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdText.js">
-                            <h4>elementIdText.js</h4>
+                        <li id="item-elementIdText">
+                            <h4>elementIdText</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elementIdValue.js">
-                            <h4>elementIdValue.js</h4>
+                        <li id="item-elementIdValue">
+                            <h4>elementIdValue</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-elements.js">
-                            <h4>elements.js</h4>
+                        <li id="item-elements">
+                            <h4>elements</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-execute.js">
-                            <h4>execute.js</h4>
+                        <li id="item-execute">
+                            <h4>execute</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-frame.js">
-                            <h4>frame.js</h4>
+                        <li id="item-frame">
+                            <h4>frame</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-getAlertText.js">
-                            <h4>getAlertText.js</h4>
+                        <li id="item-getAlertText">
+                            <h4>getAlertText</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-init.js">
-                            <h4>init.js</h4>
+                        <li id="item-init">
+                            <h4>init</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-moveTo.js">
-                            <h4>moveTo.js</h4>
+                        <li id="item-moveTo">
+                            <h4>moveTo</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-screenshot.js">
-                            <h4>screenshot.js</h4>
+                        <li id="item-screenshot">
+                            <h4>screenshot</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-session.js">
-                            <h4>session.js</h4>
+                        <li id="item-session">
+                            <h4>session</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-setPromptText.js">
-                            <h4>setPromptText.js</h4>
+                        <li id="item-setPromptText">
+                            <h4>setPromptText</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-status.js">
-                            <h4>status.js</h4>
+                        <li id="item-status">
+                            <h4>status</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-submit.js">
-                            <h4>submit.js</h4>
+                        <li id="item-submit">
+                            <h4>submit</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-title.js">
-                            <h4>title.js</h4>
+                        <li id="item-title">
+                            <h4>title</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-url.js">
-                            <h4>url.js</h4>
+                        <li id="item-url">
+                            <h4>url</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-value.js">
-                            <h4>value.js</h4>
+                        <li id="item-value">
+                            <h4>value</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-window.js">
-                            <h4>window.js</h4>
+                        <li id="item-window">
+                            <h4>window</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-windowHandles.js">
-                            <h4>windowHandles.js</h4>
+                        <li id="item-windowHandles">
+                            <h4>windowHandles</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
@@ -651,28 +675,28 @@
                 <li>
                     <h3>jasTest&#x2F;</h3>
                     <ul>
-                        <li id="item-describe.js">
-                            <h4>describe.js</h4>
+                        <li id="item-describe">
+                            <h4>describe</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-describeEnd.js">
-                            <h4>describeEnd.js</h4>
+                        <li id="item-describeEnd">
+                            <h4>describeEnd</h4>
                             <div class="description">
                             <pre> * 一个Suite结束时将被调用（该方法自动嵌入到describe方法中，不需要显性调用）
  * @param desc
  * @param next</pre>
                             </div>
                         </li>
-                        <li id="item-it.js">
-                            <h4>it.js</h4>
+                        <li id="item-it">
+                            <h4>it</h4>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
-                        <li id="item-itEnd.js">
-                            <h4>itEnd.js</h4>
+                        <li id="item-itEnd">
+                            <h4>itEnd</h4>
                             <div class="description">
                             <pre> * 一个Suite结束时将被调用（该方法自动嵌入到describe方法中，不需要显性调用）
  * @param desc

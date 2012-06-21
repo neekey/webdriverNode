@@ -2,11 +2,11 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8"></meta>
-    <title></title>
+    <title>UI测试-API列表</title>
 </head>
 <body>
     <div class="header">
-        <h2>API DOC</h2>
+        <h2>UI测试-API列表</h2>
     </div>
     <div class="content">
         <div class="catalog">

@@ -12,11 +12,11 @@ var targetDirsDesc = [
     '普通操作命令（由底层协议派生）',
     '底层协议命令描述：\n' +
     '如果您使用protocol级别的方法，所有的回到返回值都遵循以下json格式\n' +
-    '格式：{\n' +
-    '    sessionId:  {string|null}   某次回话的浏览器sessionId值\n' +
-    '    status:     {number}        一个状态代码，总结了该命令的结果。非零值表示该命令失败。\n' +
-    '    value:      {*}             返回的JSON数据\n' +
-    '}\n' +
+    '   格式：{\n' +
+    '       sessionId:  {string|null}   某次回话的浏览器sessionId值\n' +
+    '       status:     {number}        一个状态代码，总结了该命令的结果。非零值表示该命令失败。\n' +
+    '       value:      {*}             返回的JSON数据\n' +
+    '   }\n' +
     '备注：以下文档只标注value字段的内容。详细的status状态码参看http://code.google.com/p/selenium/wiki/JsonWireProtocol',
     '类jasmine测试命令' ];
 
@@ -60,11 +60,12 @@ for( i = 0; dir = targetDirs[ i ]; i++ ){
     for( j = 0; filename = items[ j ]; j++ ){
 
         itemString = fs.readFileSync( ps.join( dir, filename ), 'utf8' );
-
-        groupData.items.push({
-            name: filename,
-            description: getDescription( itemString )
-        });
+        if(/\.js$/.test(filename)){
+            groupData.items.push({
+                name: filename.replace('.js', ''),
+                description: getDescription( itemString )
+            });
+        }
     }
 
     docsData.docs.push( groupData );
@@ -117,7 +118,7 @@ function getDescription( string ){
 }
 
 // 渲染
-var template = fs.readFileSync( 'templates/index.mustache', 'utf8' );
+var template = fs.readFileSync( 'templates/index.tpl', 'utf8' );
 
 // 输出
 fs.writeFileSync( 'index.html', Mustache.render( template, docsData ), 'utf8' );
