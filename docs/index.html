@@ -145,9 +145,6 @@
                             <a href="#item-elementIdDisplayed">elementIdDisplayed</a>
                         </li>
                         <li>
-                            <a href="#item-elementIdKeys">elementIdKeys</a>
-                        </li>
-                        <li>
                             <a href="#item-elementIdLocation">elementIdLocation</a>
                         </li>
                         <li>
@@ -205,9 +202,6 @@
                             <a href="#item-url">url</a>
                         </li>
                         <li>
-                            <a href="#item-value">value</a>
-                        </li>
-                        <li>
                             <a href="#item-window">window</a>
                         </li>
                         <li>
@@ -246,87 +240,97 @@
                         <li id="item-alert">
                             <h4>alert</h4>
                             <div class="description">
-                            <pre>    @param text
-    @param callback</pre>
+                            <pre> 弹出alert对话框</pre>
                             </div>
                         </li>
                         <li id="item-click">
                             <h4>click</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 鼠标左键单击指定元素 用法：this.click(&#39;#elem&#39;)</pre>
                             </div>
                         </li>
                         <li id="item-do">
                             <h4>do</h4>
                             <div class="description">
-                            <pre> * 该方法什么都不做，只是提供一个用户在同步执行队列中运行自定义代码的入口
- * @param next</pre>
+                            <pre> 该方法什么都不做，只是提供一个用户在同步执行队列中运行自定义代码的入口</pre>
                             </div>
                         </li>
                         <li id="item-doubleClick">
                             <h4>doubleClick</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 鼠标左键双击指定元素
+ 用法：this.doubleClick(&#39;#elem&#39;)
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first</pre>
                             </div>
                         </li>
                         <li id="item-dragAndDrop">
                             <h4>dragAndDrop</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 拖拽指定元素到指定位置
+ 用法：this.dragAndDrop(&#39;#elemTarget&#39;, &#39;#cssSelectorDropDestination&#39;)
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
                             </div>
                         </li>
                         <li id="item-end">
                             <h4>end</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 删除当前session，内部方法，一般不会用到</pre>
                             </div>
                         </li>
                         <li id="item-facebookLogin">
                             <h4>facebookLogin</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 一个封装的facebook登陆，不推荐使用,仅仅是一个例子
+ 用法：this.facebookLogin(username, password)</pre>
                             </div>
                         </li>
                         <li id="item-getAttribute">
                             <h4>getAttribute</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取指定元素的指定属性值
+ 用法：this.getAttribute(cssSelector, attributeName, function(ret))
+ 例如：
+    &lt;div id=&quot;id&quot; data-spm=&quot;12345&quot;&gt;&lt;&#x2F;div&gt;
+    this.getAttribute(&#39;#id&#39;, &#39;data-spm&#39;, function(ret){
+        &#x2F;&#x2F;ret为12345
+    })
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
                             </div>
                         </li>
                         <li id="item-getCssProperty">
                             <h4>getCssProperty</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取指定元素的指定CSS属性值</pre>
                             </div>
                         </li>
                         <li id="item-getElementCssProperty">
                             <h4>getElementCssProperty</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 扩展的获取css属性方法，请参阅element方法（在css选择器无法获取到这个元素时可以采用）。</pre>
                             </div>
                         </li>
                         <li id="item-getElementSize">
                             <h4>getElementSize</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 扩展的获取元素的尺寸大小，请参阅element方法（在css选择器无法获取到这个元素时可以采用）。</pre>
                             </div>
                         </li>
                         <li id="item-getLocation">
                             <h4>getLocation</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 确定一个元素在页面上的位置。（0,0）是指在页面的左上角。返回该元素的坐标x和y.</pre>
                             </div>
                         </li>
                         <li id="item-getLocationInView">
                             <h4>getLocationInView</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> Determine an element&#39;s location on the screen once it has been scrolled into view.</pre>
                             </div>
                         </li>
                         <li id="item-getSize">
                             <h4>getSize</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取指定元素的尺寸大小</pre>
                             </div>
                         </li>
                         <li id="item-getTagName">
@@ -515,157 +519,295 @@
                         <li id="item-elementIdClick">
                             <h4>elementIdClick</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 在指定元素上点击
+
+ 用法：this.elementIdClick(id, function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdCssProperty">
                             <h4>elementIdCssProperty</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 查询指定元素的CSS属性值。
+
+ 用法：this.elementIdCssProperty(id, cssProperyName, function(ret){});
+
+ 其中ret.value为
+ string
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdDisplayed">
                             <h4>elementIdDisplayed</h4>
                             <div class="description">
-                            <pre></pre>
-                            </div>
-                        </li>
-                        <li id="item-elementIdKeys">
-                            <h4>elementIdKeys</h4>
-                            <div class="description">
-                            <pre></pre>
+                            <pre> 判断一个元素是否正在显示。
+
+ 用法：this.elementIdDisplayed(id, function(ret){});
+
+ 其中ret.value为
+ boolean
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdLocation">
                             <h4>elementIdLocation</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 确定一个元素在页面上的位置。（0,0）是指在页面的左上角。返回该元素的坐标x和y.
+
+ 用法：this.elementIdLocation(id, function(ret){});
+
+ 其中ret.value为
+     {
+         &#39;x&#39;: number,
+         &#39;y&#39;: number
+     }
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdLocationInView">
                             <h4>elementIdLocationInView</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> Determine an element&#39;s location on the screen once it has been scrolled into view.
+
+ Note: This is considered an internal command and should only be used to determine an element&#39;s location for correctly generating native events.
+
+ 用法：this.elementIdLocationInView(id, function(ret){});
+
+ 其中ret.value为
+     {
+         &#39;x&#39;: number,
+         &#39;y&#39;: number
+     }
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdName">
                             <h4>elementIdName</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 查询指定元素的tag name
+
+ 用法：this.elementIdName(id, function(ret){});
+
+ 其中ret.value为
+    string
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdSize">
                             <h4>elementIdSize</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 查询一个元素的尺寸（px）。
+
+ 用法：this.elementIdSize(id, function(ret){});
+
+ 其中ret.value为
+     {
+         width:number,
+         height:number
+     }
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdText">
                             <h4>elementIdText</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 查询一个元素的可见文本（待定）。Returns the visible text for the element.
+
+ 用法：this.elementIdText(id, function(ret){});
+
+ 其中ret.value为
+ {
+ &#x2F;&#x2F;待定
+ }
+</pre>
                             </div>
                         </li>
                         <li id="item-elementIdValue">
                             <h4>elementIdValue</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 在指定元素上顺序按下指定按键。特殊符号代码请查阅：http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#&#x2F;session&#x2F;:sessionId&#x2F;element&#x2F;:id&#x2F;value
+
+ 用法：this.elementIdKeys(id, keys, function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
                         <li id="item-elements">
                             <h4>elements</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 类似element方法，不过这个查找是查找所有元素，并且返回数组
+
+ 用法：this.elements(id, keys, function(ret){});
+
+ 其中ret.value
+ {
+ [
+ {&#39;ELEMENT&#39;: string},
+ {&#39;ELEMENT&#39;: string}
+ ]
+ }
+</pre>
                             </div>
                         </li>
                         <li id="item-execute">
                             <h4>execute</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 在当前的frame中插入一段js脚本执行，并返回脚本执行后的结果。
+
+ 用法：
+     1、this.execute(&#39;function(a,b,c){}&#39;, [a,b,c], function(ret){});
+     2、this.execute(&#39;function(){}&#39;, function(ret){});
+
+ 其中ret.value为脚本返回的结果
+</pre>
                             </div>
                         </li>
                         <li id="item-frame">
                             <h4>frame</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 改变当前焦点为指定的frame中。如果id为空，那么切换到默认frame（一般为顶层frmae）。
+
+ 用法：this.frame(id, function(ret){});
+    1、this.frame(0); &#x2F;&#x2F;切换到页面中的第一个frame中
+    2、this.frame({ELEMENT: 1});&#x2F;&#x2F;切换到element方法查找到的指定元素中
+    3、this.frame(&#39;myname&#39;);&#x2F;&#x2F;切换到name值为myname的frame中
+    4、this.frame();&#x2F;&#x2F;切换到默认frame中
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
                         <li id="item-getAlertText">
                             <h4>getAlertText</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取当前显示的alert、confirm、prompt对话框的提示文字
+
+ 用法：this.getAlertText(function(ret){});
+
+ 其中ret.value为
+    string
+</pre>
                             </div>
                         </li>
                         <li id="item-init">
                             <h4>init</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 创建一个新的浏览器会话，可指定一些浏览器特性，返回创建的sessionId
+
+ 用法：
+    1、this.init(desiredCapabilities, function(ret){});
+    2、this.init(function(ret){});
+
+ 其中ret.value为
+    Capabilities JSON Object
+
+ 注意：
+    Capabilities JSON Object，desiredCapabilities是一个特殊对象（特殊格式的JSON），详细参看：http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#Capabilities_JSON_Object
+</pre>
                             </div>
                         </li>
                         <li id="item-moveTo">
                             <h4>moveTo</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 移动鼠标到指定元素，在相对指定元素偏移（x,y）
+ 如果不指定元素，那么相对于当前鼠标位置偏移（x,y）
+ 如果指定元素，但不指定偏移值，鼠标将移动到该元素的中心
+ 如果指定的元素不在可见区域，会滚动文档使元素处于可见区域
+
+ 用法：
+     1、this.moveTo(id, x, y, function(ret){});
+     2、this.moveTo(x, y, function(ret){});
+     3、this.moveTo(id, function(ret){});
+
+ 其中ret.value为null
+
+ 注意：
+    id为WebElement JSON Object
+</pre>
                             </div>
                         </li>
                         <li id="item-screenshot">
                             <h4>screenshot</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 对当前页面截图，并返回base64后的PNG数据
+
+ 用法：this.screenshot(function(ret){})
+
+ 其中ret.value为base64后的PNG数据
+
+ 注意：不推荐使用这个方法，推荐使用saveScreenshot
+</pre>
                             </div>
                         </li>
                         <li id="item-session">
                             <h4>session</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取当前浏览器会话的信息
+ 或者删除这个会话（关闭浏览器窗口）
+
+ 用法：
+     1、this.session(function(ret){});&#x2F;&#x2F;获取
+     2、this.session(&#39;get&#39;, function(ret){});&#x2F;&#x2F;同上
+     3、this.session(&#39;delete&#39;, function(ret){});&#x2F;&#x2F;删除
+
+ 其中ret.value为
+     Capabilities JSON Object
+
+ 注意：
+    Capabilities JSON Object，desiredCapabilities是一个特殊对象（特殊格式的JSON），详细参看：http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#Capabilities_JSON_Object
+</pre>
                             </div>
                         </li>
                         <li id="item-setPromptText">
                             <h4>setPromptText</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 发送按键到一个javascript产生的prompt对话框(此方法可能有问题，需要测试！)
+
+ 用法：this.setPromptText(text, function(ret){});
+
+ 其中ret.value为null
+</pre>
                             </div>
                         </li>
                         <li id="item-status">
                             <h4>status</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 获取当前服务器状态。查询不一定会成功，可能返回空值。</pre>
                             </div>
                         </li>
                         <li id="item-submit">
                             <h4>submit</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 提交一个表单form，提交命令不只是只能用于form类型的元素，还可以对任何form元素的子元素。</pre>
                             </div>
                         </li>
                         <li id="item-title">
                             <h4>title</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 去的当前页面的title值</pre>
                             </div>
                         </li>
                         <li id="item-url">
                             <h4>url</h4>
                             <div class="description">
-                            <pre></pre>
-                            </div>
-                        </li>
-                        <li id="item-value">
-                            <h4>value</h4>
-                            <div class="description">
-                            <pre></pre>
+                            <pre> 获取当前页面的uri(可以通过frame方法取得frame中的uri)
+ 跳转到某uri</pre>
                             </div>
                         </li>
                         <li id="item-window">
                             <h4>window</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 此命令用于切换focus到另一个window中</pre>
                             </div>
                         </li>
                         <li id="item-windowHandles">
                             <h4>windowHandles</h4>
                             <div class="description">
-                            <pre></pre>
+                            <pre> 此命令暂不解释，可以实现window的位置、大小改变。
+ http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#&#x2F;session&#x2F;:sessionId&#x2F;window</pre>
                             </div>
                         </li>
                     </ul>
