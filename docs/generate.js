@@ -84,7 +84,8 @@ function getDescription( string ){
     var i;
     var line;
 
-    for( i = 0; line = strArr[ i ]; i++ ){
+    for( i = 0; i < strArr.length ; i++ ){
+        line = strArr[ i ];
 
         // 若注释已经解析完毕，则跳出
         if( descEnd && descBegin ){
