@@ -1,18 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8"></meta>
-    <title>UI测试-API列表</title>
-</head>
-<body>
-    <div class="header">
-        <h2>UI测试-API列表</h2>
-    </div>
-    <div class="content">
+
         <div class="catalog">
             <ul>
                 <li>
-                    <h3>commands&#x2F;</h3>
+                    <p><h3>commands&#x2F;</h3></p>
                     <pre>普通操作命令（由底层协议派生）</pre>
                     <ul>
                         <li>
@@ -101,7 +91,7 @@
             </ul>
             <ul>
                 <li>
-                    <h3>protocol&#x2F;</h3>
+                    <p><h3>protocol&#x2F;</h3></p>
                     <pre>底层协议命令描述：
 如果您使用protocol级别的方法，所有的回到返回值都遵循以下json格式
    格式：{
@@ -206,7 +196,7 @@
             </ul>
             <ul>
                 <li>
-                    <h3>jasTest&#x2F;</h3>
+                    <p><h3>jasTest&#x2F;</h3></p>
                     <pre>类jasmine测试命令</pre>
                     <ul>
                         <li>
@@ -229,10 +219,10 @@
         <div class="documents">
             <ul>
                 <li>
-                    <h3>commands&#x2F;</h3>
+                    <p><h3>commands&#x2F;</h3></p>
                     <ul>
                         <li id="item-alert">
-                            <h4>alert</h4>
+                            <p><h4>alert</h4></p>
                             <div class="description">
                             <pre> 弹出alert对话框
 
@@ -241,7 +231,7 @@
                             </div>
                         </li>
                         <li id="item-click">
-                            <h4>click</h4>
+                            <p><h4>click</h4></p>
                             <div class="description">
                             <pre> 鼠标左键单击指定元素 用法：this.click(&#39;#elem&#39;)
 
@@ -250,14 +240,14 @@
                             </div>
                         </li>
                         <li id="item-do">
-                            <h4>do</h4>
+                            <p><h4>do</h4></p>
                             <div class="description">
                             <pre> 该方法什么都不做，只是提供一个用户在同步执行队列中运行自定义代码的入口
 </pre>
                             </div>
                         </li>
                         <li id="item-doubleClick">
-                            <h4>doubleClick</h4>
+                            <p><h4>doubleClick</h4></p>
                             <div class="description">
                             <pre> 鼠标左键双击指定元素
  用法：this.doubleClick(&#39;#elem&#39;)
@@ -266,7 +256,7 @@
                             </div>
                         </li>
                         <li id="item-dragAndDrop">
-                            <h4>dragAndDrop</h4>
+                            <p><h4>dragAndDrop</h4></p>
                             <div class="description">
                             <pre> 拖拽指定元素到指定位置
  用法：this.dragAndDrop(&#39;#elemTarget&#39;, &#39;#cssSelectorDropDestination&#39;)
@@ -275,14 +265,14 @@
                             </div>
                         </li>
                         <li id="item-end">
-                            <h4>end</h4>
+                            <p><h4>end</h4></p>
                             <div class="description">
                             <pre> 删除当前session，内部方法，一般不会用到
 </pre>
                             </div>
                         </li>
                         <li id="item-facebookLogin">
-                            <h4>facebookLogin</h4>
+                            <p><h4>facebookLogin</h4></p>
                             <div class="description">
                             <pre> 一个封装的facebook登陆，不推荐使用,仅仅是一个例子
  用法：this.facebookLogin(username, password)
@@ -290,7 +280,7 @@
                             </div>
                         </li>
                         <li id="item-getAttribute">
-                            <h4>getAttribute</h4>
+                            <p><h4>getAttribute</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的指定属性值
  用法：this.getAttribute(cssSelector, attributeName, function(ret))
@@ -304,7 +294,7 @@
                             </div>
                         </li>
                         <li id="item-getCssProperty">
-                            <h4>getCssProperty</h4>
+                            <p><h4>getCssProperty</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的指定CSS属性值
 
@@ -323,7 +313,7 @@
                             </div>
                         </li>
                         <li id="item-getElementCssProperty">
-                            <h4>getElementCssProperty</h4>
+                            <p><h4>getElementCssProperty</h4></p>
                             <div class="description">
                             <pre> 扩展的获取css属性方法，请参阅element方法（在css选择器无法获取到这个元素时可以采用）。
 
@@ -337,7 +327,7 @@
                             </div>
                         </li>
                         <li id="item-getElementSize">
-                            <h4>getElementSize</h4>
+                            <p><h4>getElementSize</h4></p>
                             <div class="description">
                             <pre> 扩展的获取元素的尺寸大小，请参阅element方法（在css选择器无法获取到这个元素时可以采用）。
 
@@ -356,7 +346,7 @@
                             </div>
                         </li>
                         <li id="item-getLocation">
-                            <h4>getLocation</h4>
+                            <p><h4>getLocation</h4></p>
                             <div class="description">
                             <pre> 确定一个元素在页面上的位置。（0,0）是指在页面的左上角。返回该元素的坐标x和y.
 
@@ -371,7 +361,7 @@
                             </div>
                         </li>
                         <li id="item-getLocationInView">
-                            <h4>getLocationInView</h4>
+                            <p><h4>getLocationInView</h4></p>
                             <div class="description">
                             <pre> Determine an element&#39;s location on the screen once it has been scrolled into view.
 
@@ -388,7 +378,7 @@
                             </div>
                         </li>
                         <li id="item-getSize">
-                            <h4>getSize</h4>
+                            <p><h4>getSize</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的尺寸大小
 
@@ -407,7 +397,7 @@
                             </div>
                         </li>
                         <li id="item-getTagName">
-                            <h4>getTagName</h4>
+                            <p><h4>getTagName</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的TagName
 
@@ -420,11 +410,12 @@
     ret === &#39;span&#39;
  })
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-getText">
-                            <h4>getText</h4>
+                            <p><h4>getText</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的可见文本
 
@@ -437,20 +428,22 @@
     ret === &#39;text is ok !&#39;
  })
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-getTitle">
-                            <h4>getTitle</h4>
+                            <p><h4>getTitle</h4></p>
                             <div class="description">
                             <pre> 获取当前页面title
 
  用法：this.getTitle(function(ret){});
+
 </pre>
                             </div>
                         </li>
                         <li id="item-getValue">
-                            <h4>getValue</h4>
+                            <p><h4>getValue</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的value值
 
@@ -463,11 +456,12 @@
     ret === &#39;t1234&#39;
  })
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-isVisible">
-                            <h4>isVisible</h4>
+                            <p><h4>isVisible</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的可见性
 
@@ -480,57 +474,63 @@
     ret === false
  })
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-log">
-                            <h4>log</h4>
+                            <p><h4>log</h4></p>
                             <div class="description">
                             <pre> 输出自定义的log
 
- 用法：this.log(&#39;我是log!&#39;)</pre>
+ 用法：this.log(&#39;我是log!&#39;)
+</pre>
                             </div>
                         </li>
                         <li id="item-moveToObject">
-                            <h4>moveToObject</h4>
+                            <p><h4>moveToObject</h4></p>
                             <div class="description">
                             <pre> 鼠标移动到指定元素的中心
 
  用法：this.moveToObject(cssSelector);
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-pause">
-                            <h4>pause</h4>
+                            <p><h4>pause</h4></p>
                             <div class="description">
                             <pre> 暂停指定毫秒
 
- 用法：this.pause(1000, function(){});</pre>
+ 用法：this.pause(1000, function(){});
+</pre>
                             </div>
                         </li>
                         <li id="item-prompt">
-                            <h4>prompt</h4>
+                            <p><h4>prompt</h4></p>
                             <div class="description">
                             <pre> 弹出prompt对话框（基于execute方法）
 
  用法：this.prompt(&#39;this is text&#39;, function(ret){
     ret === &#39;this is text&#39;;
  });
+
 </pre>
                             </div>
                         </li>
                         <li id="item-saveScreenshot">
-                            <h4>saveScreenshot</h4>
+                            <p><h4>saveScreenshot</h4></p>
                             <div class="description">
                             <pre> 保存当前截图，并在日志中输出图片地址
 
  用法：this.saveScreenshot();
+
 </pre>
                             </div>
                         </li>
                         <li id="item-sendKeys">
-                            <h4>sendKeys</h4>
+                            <p><h4>sendKeys</h4></p>
                             <div class="description">
                             <pre> 在指定元素上顺序按下指定按键.特殊符号代码请查阅：http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#&#x2F;session&#x2F;:sessionId&#x2F;element&#x2F;:id&#x2F;value
 
@@ -541,27 +541,30 @@
 
  this.sendKey(&#39;#id&#39;, &#39;U+E00C&#39;);
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-submitForm">
-                            <h4>submitForm</h4>
+                            <p><h4>submitForm</h4></p>
                             <div class="description">
                             <pre> 提交一个表单form，提交命令不只是只能用于form类型的元素，还可以对任何form元素的子元素。相当于在这个元素上按回车。
 
  用法：this.submitForm(cssSelector);
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                         <li id="item-waitFor">
-                            <h4>waitFor</h4>
+                            <p><h4>waitFor</h4></p>
                             <div class="description">
                             <pre> 等待某个元素出现在页面(需要设置超时)
 
  用法：this.waitFor(cssSelector, waitForMilliseconds， function(){});
 
- 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）</pre>
+ 注意：此处支持所有的css选择器，可以多级使用，如（#id .class:first）
+</pre>
                             </div>
                         </li>
                     </ul>
@@ -569,10 +572,10 @@
             </ul>
             <ul>
                 <li>
-                    <h3>protocol&#x2F;</h3>
+                    <p><h3>protocol&#x2F;</h3></p>
                     <ul>
                         <li id="item-acceptAlert">
-                            <h4>acceptAlert</h4>
+                            <p><h4>acceptAlert</h4></p>
                             <div class="description">
                             <pre> 接受当前显示的警告对话框。通常，这是相当于在alert对话框上点击“确定”按钮。
 
@@ -583,7 +586,7 @@
                             </div>
                         </li>
                         <li id="item-buttonDown">
-                            <h4>buttonDown</h4>
+                            <p><h4>buttonDown</h4></p>
                             <div class="description">
                             <pre> 在鼠标当前位置按住鼠标左键，请注意，在这个事件后面需要跟随鼠标release命令。click命令也会release鼠标。
 
@@ -594,7 +597,7 @@
                             </div>
                         </li>
                         <li id="item-buttonUp">
-                            <h4>buttonUp</h4>
+                            <p><h4>buttonUp</h4></p>
                             <div class="description">
                             <pre> 释放鼠标左键，每次mouseDown之后都必须调用一次这个方法
 
@@ -605,7 +608,7 @@
                             </div>
                         </li>
                         <li id="item-doDoubleClick">
-                            <h4>doDoubleClick</h4>
+                            <p><h4>doDoubleClick</h4></p>
                             <div class="description">
                             <pre> 在当前鼠标位置双击鼠标左键（当前位置可由moveto设定）
 
@@ -616,7 +619,7 @@
                             </div>
                         </li>
                         <li id="item-element">
-                            <h4>element</h4>
+                            <p><h4>element</h4></p>
                             <div class="description">
                             <pre> 查找页面上的元素,并返回找到的第一个元素，下面列出了支持的查找模式
  ====================================================================
@@ -642,7 +645,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdAttribute">
-                            <h4>elementIdAttribute</h4>
+                            <p><h4>elementIdAttribute</h4></p>
                             <div class="description">
                             <pre> 获取指定元素的属性值
 
@@ -658,7 +661,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdClick">
-                            <h4>elementIdClick</h4>
+                            <p><h4>elementIdClick</h4></p>
                             <div class="description">
                             <pre> 在指定元素上点击
 
@@ -669,7 +672,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdCssProperty">
-                            <h4>elementIdCssProperty</h4>
+                            <p><h4>elementIdCssProperty</h4></p>
                             <div class="description">
                             <pre> 查询指定元素的CSS属性值。
 
@@ -681,7 +684,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdDisplayed">
-                            <h4>elementIdDisplayed</h4>
+                            <p><h4>elementIdDisplayed</h4></p>
                             <div class="description">
                             <pre> 判断一个元素是否正在显示。
 
@@ -693,7 +696,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdKeys">
-                            <h4>elementIdKeys</h4>
+                            <p><h4>elementIdKeys</h4></p>
                             <div class="description">
                             <pre> 在指定元素上顺序按下指定按键。特殊符号代码请查阅：http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#&#x2F;session&#x2F;:sessionId&#x2F;element&#x2F;:id&#x2F;value
 
@@ -704,7 +707,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdLocation">
-                            <h4>elementIdLocation</h4>
+                            <p><h4>elementIdLocation</h4></p>
                             <div class="description">
                             <pre> 确定一个元素在页面上的位置。（0,0）是指在页面的左上角。返回该元素的坐标x和y.
 
@@ -719,7 +722,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdLocationInView">
-                            <h4>elementIdLocationInView</h4>
+                            <p><h4>elementIdLocationInView</h4></p>
                             <div class="description">
                             <pre> Determine an element&#39;s location on the screen once it has been scrolled into view.
 
@@ -736,7 +739,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdName">
-                            <h4>elementIdName</h4>
+                            <p><h4>elementIdName</h4></p>
                             <div class="description">
                             <pre> 查询指定元素的tag name
 
@@ -748,7 +751,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdSize">
-                            <h4>elementIdSize</h4>
+                            <p><h4>elementIdSize</h4></p>
                             <div class="description">
                             <pre> 查询一个元素的尺寸（px）。
 
@@ -763,7 +766,7 @@
                             </div>
                         </li>
                         <li id="item-elementIdText">
-                            <h4>elementIdText</h4>
+                            <p><h4>elementIdText</h4></p>
                             <div class="description">
                             <pre> 查询一个元素的可见文本（待定）。Returns the visible text for the element.
 
@@ -777,7 +780,7 @@
                             </div>
                         </li>
                         <li id="item-elements">
-                            <h4>elements</h4>
+                            <p><h4>elements</h4></p>
                             <div class="description">
                             <pre> 类似element方法，不过这个查找是查找所有元素，并且返回数组
 
@@ -794,7 +797,7 @@
                             </div>
                         </li>
                         <li id="item-execute">
-                            <h4>execute</h4>
+                            <p><h4>execute</h4></p>
                             <div class="description">
                             <pre> 在当前的frame中插入一段js脚本执行，并返回脚本执行后的结果。
 
@@ -807,7 +810,7 @@
                             </div>
                         </li>
                         <li id="item-frame">
-                            <h4>frame</h4>
+                            <p><h4>frame</h4></p>
                             <div class="description">
                             <pre> 改变当前焦点为指定的frame中。如果id为空，那么切换到默认frame（一般为顶层frmae）。
 
@@ -822,7 +825,7 @@
                             </div>
                         </li>
                         <li id="item-getAlertText">
-                            <h4>getAlertText</h4>
+                            <p><h4>getAlertText</h4></p>
                             <div class="description">
                             <pre> 获取当前显示的alert、confirm、prompt对话框的提示文字
 
@@ -834,7 +837,7 @@
                             </div>
                         </li>
                         <li id="item-init">
-                            <h4>init</h4>
+                            <p><h4>init</h4></p>
                             <div class="description">
                             <pre> 创建一个新的浏览器会话，可指定一些浏览器特性，返回创建的sessionId
 
@@ -851,7 +854,7 @@
                             </div>
                         </li>
                         <li id="item-moveTo">
-                            <h4>moveTo</h4>
+                            <p><h4>moveTo</h4></p>
                             <div class="description">
                             <pre> 移动鼠标到指定元素，在相对指定元素偏移（x,y）
  如果不指定元素，那么相对于当前鼠标位置偏移（x,y）
@@ -871,7 +874,7 @@
                             </div>
                         </li>
                         <li id="item-screenshot">
-                            <h4>screenshot</h4>
+                            <p><h4>screenshot</h4></p>
                             <div class="description">
                             <pre> 对当前页面截图，并返回base64后的PNG数据
 
@@ -884,7 +887,7 @@
                             </div>
                         </li>
                         <li id="item-session">
-                            <h4>session</h4>
+                            <p><h4>session</h4></p>
                             <div class="description">
                             <pre> 获取当前浏览器会话的信息
  或者删除这个会话（关闭浏览器窗口）
@@ -903,7 +906,7 @@
                             </div>
                         </li>
                         <li id="item-setPromptText">
-                            <h4>setPromptText</h4>
+                            <p><h4>setPromptText</h4></p>
                             <div class="description">
                             <pre> 发送按键到一个javascript产生的prompt对话框(此方法可能有问题，需要测试！)
 
@@ -914,7 +917,7 @@
                             </div>
                         </li>
                         <li id="item-status">
-                            <h4>status</h4>
+                            <p><h4>status</h4></p>
                             <div class="description">
                             <pre> 获取当前服务器状态。查询不一定会成功，可能返回空值。
 
@@ -935,7 +938,7 @@
                             </div>
                         </li>
                         <li id="item-submit">
-                            <h4>submit</h4>
+                            <p><h4>submit</h4></p>
                             <div class="description">
                             <pre> 提交一个表单form，提交命令不只是只能用于form类型的元素，还可以对任何form元素的子元素。
 
@@ -949,7 +952,7 @@
                             </div>
                         </li>
                         <li id="item-title">
-                            <h4>title</h4>
+                            <p><h4>title</h4></p>
                             <div class="description">
                             <pre> 去的当前页面的title值
 
@@ -961,7 +964,7 @@
                             </div>
                         </li>
                         <li id="item-url">
-                            <h4>url</h4>
+                            <p><h4>url</h4></p>
                             <div class="description">
                             <pre> 获取当前页面的uri(可以通过frame方法取得frame中的uri)
  跳转到某uri
@@ -980,7 +983,7 @@
                             </div>
                         </li>
                         <li id="item-window">
-                            <h4>window</h4>
+                            <p><h4>window</h4></p>
                             <div class="description">
                             <pre> 此命令用于切换focus到另一个window中
 
@@ -994,7 +997,7 @@
                             </div>
                         </li>
                         <li id="item-windowHandles">
-                            <h4>windowHandles</h4>
+                            <p><h4>windowHandles</h4></p>
                             <div class="description">
                             <pre> 此命令暂不解释，可以实现window的位置、大小改变。
  http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;selenium&#x2F;wiki&#x2F;JsonWireProtocol#&#x2F;session&#x2F;:sessionId&#x2F;window
@@ -1006,16 +1009,16 @@
             </ul>
             <ul>
                 <li>
-                    <h3>jasTest&#x2F;</h3>
+                    <p><h3>jasTest&#x2F;</h3></p>
                     <ul>
                         <li id="item-describe">
-                            <h4>describe</h4>
+                            <p><h4>describe</h4></p>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
                         <li id="item-describeEnd">
-                            <h4>describeEnd</h4>
+                            <p><h4>describeEnd</h4></p>
                             <div class="description">
                             <pre> * 一个Suite结束时将被调用（该方法自动嵌入到describe方法中，不需要显性调用）
  * @param desc
@@ -1023,13 +1026,13 @@
                             </div>
                         </li>
                         <li id="item-it">
-                            <h4>it</h4>
+                            <p><h4>it</h4></p>
                             <div class="description">
                             <pre></pre>
                             </div>
                         </li>
                         <li id="item-itEnd">
-                            <h4>itEnd</h4>
+                            <p><h4>itEnd</h4></p>
                             <div class="description">
                             <pre> * 一个Suite结束时将被调用（该方法自动嵌入到describe方法中，不需要显性调用）
  * @param desc
@@ -1040,6 +1043,3 @@
                 </li>
             </ul>
         </div>
-    </div>
-</body>
-</html>

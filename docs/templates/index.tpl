@@ -1,19 +1,9 @@
-<!DOCTYPE HTML>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8"></meta>
-    <title>UI测试-API列表</title>
-</head>
-<body>
-    <div class="header">
-        <h2>UI测试-API列表</h2>
-    </div>
-    <div class="content">
+
         <div class="catalog">
             {{#docs}}
             <ul>
                 <li>
-                    <h3>{{name}}</h3>
+                    <p><h3>{{name}}</h3></p>
                     <pre>{{desc}}</pre>
                     <ul>
                         {{#items}}
@@ -31,11 +21,11 @@
             {{#docs}}
             <ul>
                 <li>
-                    <h3>{{name}}</h3>
+                    <p><h3>{{name}}</h3></p>
                     <ul>
                         {{#items}}
                         <li id="item-{{name}}">
-                            <h4>{{name}}</h4>
+                            <p><h4>{{name}}</h4></p>
                             <div class="description">
                             <pre>{{description}}</pre>
                             </div>
@@ -46,6 +36,3 @@
             </ul>
             {{/docs}}
         </div>
-    </div>
-</body>
-</html>
