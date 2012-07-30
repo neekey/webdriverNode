@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Webdrivernode by neekey</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/neekey/webdriverNode">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/neekey/webdriverNode/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/neekey/webdriverNode/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Webdrivernode</h1>
+          <p>The NodeJS implementation of Selenium JsonWireProtocol</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/neekey">neekey</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>WebdriverNode</h1>
+
+<p>The nodeJS implementation of the selenium2 jsonWireProtocol.</p>
+
+<p>However, webdriverNode is first forked from <a href="https://github.com/Camme/webdriverjs">webdriverjs</a>, But as we use webdriverNode for our own project <a href="https://github.com/neekey/f2etest">F2ETEST</a>, it became very different from the webdriverjs. So we let webdriverNode become an independent project.</p>
+
+<p>Thanks webdriverjs and its author <a href="https://github.com/Camme" class="user-mention">@Camme</a>!</p>
+
+<h2>install</h2>
+
+<p><code>npm install webdriverNode</code></p>
+
+<h2>usage</h2>
+
+<h3>启动Selenium server</h3>
+
+<pre><code>java -jar selenium-server-standalone-2.11.0.jar
+</code></pre>
+
+<h3>简单的测试用例</h3>
+
+<pre><code>var webdriverNode = require("webdriverNode");
+var client = webdriverNode.remote();
+/* 
+或者通过指定ip，来操控远端的selenium server
+var client = webdriverNode.remote({
+    host: "xx.xx.xx.xx"
+    });
+另外也可以指定进行测试的浏览器
+var client = webdriverNode.remote({desiredCapabilities:{browserName:"chrome"}});
+*/
+
+client
+    .init()
+    .url("https://github.com/")
+    .getElementSize("id", "header", function(result){ console.log(result);  })
+    .getTitle(function(title) { console.log(title) })
+    .getElementCssProperty("id", "header", "color", function(result){ console.log(result);  })
+    .end(); 
+</code></pre>
+
+<h3>异步方法同步顺序执行</h3>
+
+<p>webdriverNode中提供的所有方法都是异步的。为什么是异步？因为每次操作的原理都是：</p>
+
+<p><code>webdriverNode --&gt; selsenium server --&gt; webdriver( Browser ) --&gt; Selenium Server --&gt; webdriverNode
+</code></p>
+
+<p>如果使用异步的方式写测试用例，势必会让人奔溃，因此webdriverNode使用模块<a href="https://github.com/neekey/SyncRun">SyncRun</a>来实现异步方法的同步执行。利用SyncRun的封装，
+这些方法本身是异步，但是他们会按照被调用的顺序，同步执行。举个栗子：</p>
+
+<pre><code>Client.a()
+    .b(function(){
+
+        this.c();
+        this.d({
+            this.e();
+        });
+    })
+    .f();
+</code></pre>
+
+<p>上面这段代码的执行顺序是 <code>a -&gt; b -&gt; c -&gt; d -&gt; e -&gt; f</code>, 表明webdriverNode中的方法是支持嵌套的。具体的原理和细节，可以参考<a href="https://github.com/neekey/syncrun">SyncRun</a>.</p>
+
+<h3>Jasmine式的测试方法</h3>
+
+<p>Selenium2 虽然提供了webdriver来操控浏览器，但是并没有提供与测试相关的方法，因此webdriverNode模仿目前比较流行的前端测试框架Jasmine进行了简单的扩展。</p>
+
+<p>一个简单的测试用例：</p>
+
+<pre><code>client.url("http://www.google.com", function(){
+
+    this.describe( 'this is describe', function(){
+
+        this.it( 'title Test', function (){
+
+            this.getTitle(function ( title ){
+
+                this.expect( title ).toBe( 'Google' );
+
+                this.setValue("#lst-ib", "webdriver")
+                    .getValue( '#lst-ib', function ( value ){
+
+                        this.expect( value ).toBe( 'webdriver' );
+                    })
+                    .submitForm("#tsf");
+            }) ;
+        });
+    });
+})
+.end(function( logs, testResult ){});
+</code></pre>
+
+<p>其写法和jasmine类似，也支持describe的嵌套，并支持一定数量的expect方法。测试结果将在end方法的回调中返回。</p>
+
+<h2>WebdriverNode相对webdriverjs的变化</h2>
+
+<ul>
+<li>独立出了异步方法顺序执行的模块<a href="https://github.com/neekey/syncRun">SyncRun</a>，提供更加自由和强大的顺序执行。</li>
+<li>添加了<code>log</code>方法，用于让用户自定义输出（本身是一个用于和异步方法一起顺序执行的方法）</li>
+<li>添加了jasmine式的测试方法</li>
+<li>记录每个顺序执行的操作过程和结果，并在<code>end</code>方法的回调中作为第一个参数返回（所有的信息，包括用户自定义log）</li>
+<li>强调一下，<code>webdriverNode</code>和<code>webdriverjs</code>在实际使用中没有区别。<code>webdriverjs</code>的<code>examples</code>可以直接用<code>webdriverNode</code>来运行</li>
+</ul><h2>文档</h2>
+
+<p>webdriverNode支持的方法可以查看<code>docs/index.html</code>，文档内容来自各个方法文件开头注释，要更新文档，请执行：</p>
+
+<pre><code>node docs/generate.js
+</code></pre>
+
+<h1>License</h1>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2011-2012 Neekey (倪云建) &lt;<a href="mailto:ni184775761@gmail.com">ni184775761@gmail.com</a>&gt;</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
