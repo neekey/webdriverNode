@@ -4,7 +4,6 @@
     "tags":["web", "test", "selenium", "browser", "javascript"],
     "version":"0.0.8",
     "contributors": {
-        "camilo tapia": "camilo.tapia@gmail.com",
         "neekey": "ni184775761@gmail.com"
     },
     "repository":{
@@ -12,7 +11,7 @@
         "url":"git@github.com:neekey/webdriverNode.git"
     },
     "bugs":{
-        "url":"https://github.com/Camme/webdriverNode/issues"
+        "url":"https://github.com/neekey/webdriverNode/issues"
     },
     "engine":["node"],
     "main":"./lib/webdriverNode",
