@@ -36,13 +36,72 @@ Thanks webdriverjs and its author @Camme!
         .getElementCssProperty("id", "header", "color", function(result){ console.log(result);  })
         .end(); 
 
-##相对webdriverjs的更新
+###异步方法同步顺序执行
+
+webdriverNode中提供的所有方法都是异步的。为什么是异步？因为每次操作的原理都是：
+
+`webdriverNode --> selsenium server --> webdriver( Browser ) --> Selenium Server --> webdriverNode
+`
+
+如果使用异步的方式写测试用例，势必会让人奔溃，因此webdriverNode使用模块[SyncRun](https://github.com/neekey/SyncRun)来实现异步方法的同步执行。利用SyncRun的封装，
+这些方法本身是异步，但是他们会按照被调用的顺序，同步执行。举个栗子：
+
+    Client.a()
+        .b(function(){
+            
+        	this.c();
+        	this.d({
+        		this.e();
+        	});
+        })
+        .f();
+        
+上面这段代码的执行顺序是 `a -> b -> c -> d -> e -> f `, 表明webdriverNode中的方法是支持嵌套的。具体的原理和细节，可以参考[SyncRun](https://github.com/neekey/syncrun).
+
+###Jasmine式的测试方法
+
+Selenium2 虽然提供了webdriver来操控浏览器，但是并没有提供与测试相关的方法，因此webdriverNode模仿目前比较流行的前端测试框架Jasmine进行了简单的扩展。
+
+一个简单的测试用例：
+
+    client.url("http://www.google.com", function(){
+        
+        this.describe( 'this is describe', function(){
+
+            this.it( 'title Test', function (){
+
+                this.getTitle(function ( title ){
+
+                    this.expect( title ).toBe( 'Google' );
+
+                    this.setValue("#lst-ib", "webdriver")
+                        .getValue( '#lst-ib', function ( value ){
+
+                            this.expect( value ).toBe( 'webdriver' );
+                        })
+                        .submitForm("#tsf");
+                }) ;
+            });
+        });
+    })
+    .end(function( logs, testResult ){});
+    
+其写法和jasmine类似，也支持describe的嵌套，并支持一定数量的expect方法。测试结果将在end方法的回调中返回。
+
+##WebdriverNode相对webdriverjs的变化
 
 * 独立出了异步方法顺序执行的模块[SyncRun](https://github.com/neekey/syncRun)，提供更加自由和强大的顺序执行。
 * 添加了`log`方法，用于让用户自定义输出（本身是一个用于和异步方法一起顺序执行的方法）
+* 添加了jasmine式的测试方法
 * 记录每个顺序执行的操作过程和结果，并在`end`方法的回调中作为第一个参数返回（所有的信息，包括用户自定义log）
 * 强调一下，`webdriverNode`和`webdriverjs`在实际使用中没有区别。`webdriverjs`的`examples`可以直接用`webdriverNode`来运行
 
+##文档
+
+webdriverNode支持的方法可以查看`docs/index.html`，文档内容来自各个方法文件开头注释，要更新文档，请执行：
+
+    node docs/generate.js
+    
 # License 
 
 (The MIT License)
