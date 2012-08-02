@@ -3,5 +3,9 @@
  */
 module.exports = {
     port: 8080,
-    host: 'localhost'
+    host: 'localhost',
+    pagePath: '/pages',
+    getPageBase: function(){
+        return 'http://' + this.host + ':' + this.port + this.pagePath;
+    }
 };
