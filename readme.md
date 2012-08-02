@@ -1,6 +1,6 @@
 #WebdriverNode 
 
-The nodeJS implementation of the selenium2 jsonWireProtocol.
+The nodeJS implementation of the selenium2 [jsonWireProtocol](https://code.google.com/p/selenium/wiki/JsonWireProtocol).
 
 However, webdriverNode is first forked from [webdriverjs](https://github.com/Camme/webdriverjs), But as we use webdriverNode for our own project [F2ETEST](https://github.com/neekey/f2etest), it became very different from the webdriverjs. So we let webdriverNode become an independent project.
 
