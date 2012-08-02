@@ -4,8 +4,13 @@
 
 * 每个API的测试用例包含一个`case`文件和一个用于测试的`html`页面，分别放在`./cases/`和`./pages/`目录下
 * 用例文件和页面文件需要同名
-* 明明规则: example.接口名称.后缀，比如接口`keys`的名称为`example.keys.js`
+* 命名规则`example.接口名称.后缀`
+    
+比如接口`keys`的名称为`example.keys.js`
+
+
 * 要执行用例，需要前启动静态服务器（这样html页面才能在浏览器里面被访问): 
+
 
     node testServer.js
 
