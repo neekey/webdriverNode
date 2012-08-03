@@ -17,6 +17,7 @@
     "main":"./lib/webdriverNode",
     "dependencies":{
         "SyncRun":"1.0.3",
+        "underscore": "",
         "node-static": ""
     }
 }
