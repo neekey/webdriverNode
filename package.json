@@ -18,6 +18,7 @@
     "dependencies":{
         "SyncRun":"1.0.3",
         "underscore": "",
-        "node-static": ""
+        "node-static": "",
+        "DirWatcher": ""
     }
 }
