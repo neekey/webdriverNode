@@ -19,6 +19,7 @@
         "SyncRun":"1.0.3",
         "underscore": "",
         "node-static": "",
-        "DirWatcher": ""
+        "dirreader": "*",
+        "base64js": "*"
     }
 }
