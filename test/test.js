@@ -4,6 +4,4 @@ var client = require( '../lib/core/webdriverNode').remote({
     }
 });
 
-setTimeout(function(){
-    console.log( client );
-}, 3000 );
+client.init().end();
