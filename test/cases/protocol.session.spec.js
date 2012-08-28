@@ -5,7 +5,7 @@ var client = require( '../../lib/core/webdriverNode').remote({
     }
 });
 
-describe( 'Command methods', function(){
+describe( 'Protocol methods', function(){
     describe( '#session()', function(){
         it( 'POST: create an new session.', function( done ){
 

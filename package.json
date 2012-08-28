@@ -20,6 +20,7 @@
         "underscore": "",
         "node-static": "",
         "dirreader": "*",
-        "base64js": "*"
+        "base64js": "*",
+        "mustache": "*"
     }
 }

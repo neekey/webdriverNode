@@ -2,7 +2,7 @@
  * 配置用于测试页面的静态服务器的相关信息
  */
 module.exports = {
-    port: 8080,
+    port: 7788,
     host: 'localhost',
     pagePath: '/pages',
     getPageBase: function(){

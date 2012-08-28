@@ -9,9 +9,10 @@ var serverConfig = require( './serverConfig' );
 var file = new static.Server;
 
 require('http').createServer(function (request, response) {
+
     request.addListener('end', function () {
         // Serve files!
         file.serve(request, response);
     });
-}).listen( serverConfig.port );
+}).listen( Number( serverConfig.port ) );
 console.log( 'test server is now listen port ' + serverConfig.port );
