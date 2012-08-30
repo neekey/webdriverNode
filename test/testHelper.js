@@ -5,7 +5,6 @@ var Mustache = require( 'mustache' );
 
 module.exports = {
     getPageUrl: function( filename, data ){
-        console.log( data );
 
         var pageBase = serverConfig.getPageBase();
         var baseName = path.basename( filename, '.js' );

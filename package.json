@@ -16,7 +16,7 @@
     "engine":["node"],
     "main":"./lib/webdriverNode",
     "dependencies":{
-        "SyncRun":"1.0.3",
+        "SyncRun":"*",
         "underscore": "",
         "node-static": "",
         "dirreader": "*",

@@ -2,7 +2,7 @@ var assert = require( 'assert' );
 var TestHelper = require( '../testHelper' );
 var client = require( '../../lib/core/webdriverNode').remote({
     desiredCapabilities: {
-        browserName:"opera"
+        browserName:"chrome"
     }
 });
 
