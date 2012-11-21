@@ -5,6 +5,14 @@ var client = require( '../../lib/core/webdriverNode').remote({
     }
 });
 
+var script = [
+    {
+        url: 'baidu',
+        str: '....'
+    }
+];
+
+
 describe( 'Protocol methods', function(){
     describe( '#execute()', function(){
         it( 'Execute a script.', function( done ){
