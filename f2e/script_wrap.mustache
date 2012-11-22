@@ -1,0 +1,39 @@
+    __done = arguments[ 0 ];
+    __Jas = {
+        data: {
+            _data: '{{& dataStr}}',
+            get:function (attr) {
+                return this._data[ attr ];
+            },
+            set:function (attr, value) {
+                this._data[ attr ] = value
+            }
+        },
+
+        done: function( returnData ){
+                    console.log( 'before execute done! ' );
+            __done( returnData );
+        }
+    };
+
+    '{{& librarys}}'
+
+    '{{& userScript}}';
+
+    var jasmineEnv = jasmine.getEnv();
+    var oldCallback = jasmineEnv.currentRunner().finishCallback;
+    jasmineEnv.currentRunner().finishCallback = function () {
+        oldCallback.apply(this, arguments);
+        __Jas.done({ __Jas: { data: __Jas.data._data, testResult: jasmine.getJSReport() } });
+    };
+
+    // Register reporters
+    jasmineEnv.addReporter(new jasmine.JSReporter());                   //< for jsreporter
+    jasmineEnv.updateInterval = 1000;
+
+    setTimeout(function() {
+        jasmine.getEnv().execute();
+    }, 50);
+
+
+
