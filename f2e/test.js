@@ -1,4 +1,4 @@
-//@url http://baidu.com
+//#url http://baidu.com
 document.body.style.background = 'red';
 describe( 'Test if we arrived at "baidu"', function(){
 
@@ -10,7 +10,7 @@ describe( 'Test if we arrived at "baidu"', function(){
     });
 });
 
-//@url http://taobao.com
+//#url http://taobao.com
 document.body.style.background = 'blue';
 describe( 'Test if we arrived at "taobao"', function(){
 
@@ -23,3 +23,6 @@ describe( 'Test if we arrived at "taobao"', function(){
         expect( __Jas.data.get( 'prevHost' ) ).toEqual( 'www.baidu.com' );
     });
 });
+//#frame #selector
+
+//@window http://taobao.com

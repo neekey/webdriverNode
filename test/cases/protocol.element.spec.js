@@ -55,7 +55,7 @@ describe( 'Protocol methods', function(){
         });
 
         it( 'name', function( done ){
-            assert.equal( 0, ret.status );
+
             client.protocol.element( 'name', pageInfo.name, function( ret ){
 
                 assert.equal( 0, ret.status );
