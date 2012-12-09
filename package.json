@@ -14,7 +14,7 @@
         "url":"https://github.com/neekey/webdriverNode/issues"
     },
     "engine":["node"],
-    "main":"./lib/webdriverNode",
+    "main":"./index.js",
     "dependencies":{
         "SyncRun":"*",
         "underscore": "",
