@@ -1,8 +1,3 @@
-/**
- * Created with IntelliJ IDEA.
- * @author neekey
- * @date 12-12-5
- */
 var assert = require( 'assert' );
 var client = require( '../../lib/core/webdriverNode').remote({
     desiredCapabilities: {
@@ -14,7 +9,7 @@ describe('Command methods', function(){
 
     describe('#executeAsync()', function(){
 
-        it( 'normal', function( done ){
+        it( 'with callback', function( done ){
 
             var args = [ 'string', 1, { commandName: 'executeAsync' } ];
 
@@ -32,10 +27,20 @@ describe('Command methods', function(){
 
                 var result = response.value.result;
                 assert.deepEqual( result, args );
+
+                done();
             });
+        });
+
+        it( 'without callback', function( next ){
+
+            client.executeAsync(function( done ){
+                document.body.style.background = 'yellow';
+                done();
+            }, undefined );
 
             client.end(function(){
-                done();
+                next();
             });
         });
     });
