@@ -21,7 +21,7 @@ describe('Command methods', function(){
                 assert.equal( 1, oldWindowHandles.length );
 
                 // 打开一个新窗口
-                client.openWindow( 'http://www.taobao.com', function( ret ){
+                client.openWindow( 'http://s.taobao.com', function( ret ){
 
                     var newHandle = ret.value;
 

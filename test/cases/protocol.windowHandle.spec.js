@@ -42,7 +42,9 @@ describe( 'Protocol methods', function(){
                     client.executeAsync( function( done ){
                         document.body.style.background = 'yellow';
                         done();
-                    }, []);
+                    }, [], function(){
+                        done();
+                    });
                 });
             });
         });
