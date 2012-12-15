@@ -15,6 +15,8 @@ describe( 'Command methods', function(){
 
         client.init();
         client.url( targetUrl );
+        // 保证页面中的所有frame都已经加载完毕
+        client.pause( 1000 );
 
         it( 'use as `name`', function( done ){
 

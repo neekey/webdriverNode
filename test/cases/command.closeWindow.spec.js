@@ -70,13 +70,20 @@ describe('Command methods', function(){
                 for( index = 0; handle = windowHandles[ index ]; index++ ){
                     client.closeWindow( handle );
                     client.protocol.windowHandles(function( ret ){
-                        assert( windowHandles.length - index - 1, ret.value.length );
+                        var count = windowHandles.length - index - 1;
+                        if( count == 0 ){
+                            count = 1;
+                        }
+                        assert( count, ret.value.length );
                     });
                 }
 
-                // 现在的窗口句柄数应该为0
+                // 现在的窗口句柄数应该为1，且该页面为空
                 client.protocol.windowHandles(function( ret ){
-                    assert.equal( 0, ret.value.length );
+                    assert.equal( 1, ret.value.length );
+                    client.title(function( ret ){
+                        assert.equal( '', ret.value );
+                    });
                     client.end(function(){
                         done();
                     });
