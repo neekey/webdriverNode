@@ -26,7 +26,6 @@ describe( 'Protocol methods', function(){
 
                 }, []);
 
-                console.log( ret );
                 client.protocol.windowHandles(function(ret ){
 
                     var winHandles = ret.value;
@@ -42,8 +41,10 @@ describe( 'Protocol methods', function(){
                     client.executeAsync( function( done ){
                         document.body.style.background = 'yellow';
                         done();
-                    }, [], function(){
-                        done();
+                    }, null );
+
+                    client.end(function(){
+                            done();
                     });
                 });
             });
