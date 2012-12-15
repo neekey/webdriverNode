@@ -13,7 +13,7 @@ module.exports = {
             this.renderPage( filename, data );
         }
 
-        return pageBase + '/' + baseName + '.html';
+        return pageBase + '/' + baseName + '.html?t=' + Date.now();
     },
 
     renderPage: function( filename, data ){
