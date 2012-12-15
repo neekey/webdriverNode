@@ -14,7 +14,9 @@ describe( 'Protocol methods', function(){
             client.protocol.session('POST', function( ret ){
 
                 var sessionId = client._data[ 'sessionId' ];
-                assert.equal( 'number', typeof parseInt( sessionId ) );
+
+                // Session Id 不一定是数字，在windows下面是一个随机唯一的字符串：980-878e89-aa433
+                assert.equal( 'string', typeof sessionId );
                 assert.equal( 0, ret.status );
                 assert.equal( sessionId, ret.value );
                 done();
@@ -32,7 +34,7 @@ describe( 'Protocol methods', function(){
                  * 下面是一个正常返回的对象结构
 
                 var expectRet = {
-                    sessionId: '1354848935413',
+                    sessionId: '1354848935413-a879098-da2232',
                     status: 0,
                     value:
                     {
@@ -61,9 +63,9 @@ describe( 'Protocol methods', function(){
 
                 */
 
-                assert.equal( 'number', typeof parseInt( sessionId ) );
+                assert.equal( 'string', typeof sessionId );
                 assert.equal( 0, ret.status );
-                assert.equal( sessionId, Number( ret.sessionId ) );
+                assert.equal( sessionId, ret.sessionId );
                 done();
             });
         });
