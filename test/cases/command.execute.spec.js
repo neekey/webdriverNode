@@ -19,6 +19,8 @@ describe('Command methods', function(){
             client.execute( function( s, n, obj ){
 
                 document.body.style.background = 'red';
+                // 测试中文的情况
+                document.body.style.color = '蓝色';
                 return { result: [ s, n, obj ] };
             }, args, function( response ){
 

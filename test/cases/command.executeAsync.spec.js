@@ -19,6 +19,8 @@ describe('Command methods', function(){
             client.executeAsync( function( s, n, obj, done ){
 
                 document.body.style.background = 'red';
+                // 测试中文的情况
+                document.body.style.color = '蓝色';
                 setTimeout(function(){
                     done({ result: [ s, n, obj ] } );
                 }, 1000 );
