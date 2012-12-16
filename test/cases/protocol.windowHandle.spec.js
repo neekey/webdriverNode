@@ -19,9 +19,9 @@ describe( 'Protocol methods', function(){
 
                 client.executeAsync(function(done){
 
-                    var win = window.open( 'http://baidu.com' );
+                    window.open( 'http://baidu.com' );
                     setTimeout( function(){
-                        done( { win: win, body: document.body } );
+                        done();
                     }, 3000 );
 
                 }, []);

@@ -26,7 +26,16 @@ describe('Command methods', function(){
             }, args, function( response ){
 
                 var result = response.value.result;
-                assert.deepEqual( result, args );
+
+                /**
+                 * 在firefox下面，所有传递回来的Object对象都会被添加一个字段 `__fxdriver_unwrapped = true;`
+                 * @link http://code.google.com/p/selenium/source/browse/trunk/javascript/selenium-atoms/firefox-chrome.js?r=11730
+                 */
+                // assert.deepEqual( result, args );
+
+                assert.equal( args[ 0 ], result[ 0 ] );
+                assert.equal( args[ 1 ], result[ 1 ] );
+                assert.equal( args[ 2 ][ 'commandName' ], result[ 2 ][ 'commandName' ] );
 
                 done();
             });
