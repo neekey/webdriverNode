@@ -8,7 +8,7 @@ var client = require( '../../lib/core/webdriverNode').remote({
 describe( 'Protocol methods', function(){
     describe( '#window()', function(){
 
-        for( var i = 0; i < 10; i++ ){
+        for( var i = 0; i < 5; i++ ){
 
             it( 'switch' + i, function( done ){
                 client.init();
