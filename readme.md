@@ -6,6 +6,10 @@ However, webdriverNode is first forked from [webdriverjs](https://github.com/Cam
 
 Thanks webdriverjs and its author @Camme!
 
+##Attention!
+
+Note that I am rewrite `webdriverNode` with branch `Reconstruction`, which will be much more power and stable.
+
 ##install
 
 `npm install webdriverNode`
